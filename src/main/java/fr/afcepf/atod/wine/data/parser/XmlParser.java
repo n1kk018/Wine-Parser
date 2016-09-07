@@ -1,14 +1,14 @@
 package fr.afcepf.atod.wine.data.parser;
 
 import fr.afcepf.atod.vin.data.exception.WineException;
-import fr.afcepf.atod.vin.entity.Product;
-import fr.afcepf.atod.vin.entity.ProductAccessories;
-import fr.afcepf.atod.vin.entity.ProductType;
-import fr.afcepf.atod.vin.entity.ProductVarietal;
-import fr.afcepf.atod.vin.entity.ProductWine;
-import fr.afcepf.atod.vin.entity.Region;
-import fr.afcepf.atod.vin.entity.Supplier;
 import fr.afcepf.atod.wine.data.product.api.IDaoProduct;
+import fr.afcepf.atod.wine.entity.Product;
+import fr.afcepf.atod.wine.entity.ProductAccessories;
+import fr.afcepf.atod.wine.entity.ProductType;
+import fr.afcepf.atod.wine.entity.ProductVarietal;
+import fr.afcepf.atod.wine.entity.ProductWine;
+import fr.afcepf.atod.wine.entity.Region;
+import fr.afcepf.atod.wine.entity.Supplier;
 
 import java.util.ArrayList;
 import java.util.Date;
