@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fr.afcepf.atod.vin.data.parser;
+package fr.afcepf.atod.wine.data.parser;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -28,9 +28,9 @@ import org.xml.sax.SAXException;
  *
  * @author ronan
  */
-public class VinParser {
+public class WineParser {
 
-    private static Logger log = Logger.getLogger(VinParser.class);
+    private static Logger log = Logger.getLogger(WineParser.class);
 
     public static void main(String[] args) {
         log.info("\t #### Debut du parsing avec JAXP #### ");
@@ -97,13 +97,13 @@ public class VinParser {
             }
         } catch (SAXException ex) {
             java.util.logging.Logger
-                    .getLogger(VinParser.class.getName()).log(Level.SEVERE, null, ex);
+                    .getLogger(WineParser.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             java.util.logging.Logger
-                    .getLogger(VinParser.class.getName()).log(Level.SEVERE, null, ex);
+                    .getLogger(WineParser.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ParserConfigurationException ex) {
             java.util.logging.Logger
-                    .getLogger(VinParser.class.getName()).log(Level.SEVERE, null, ex);
+                    .getLogger(WineParser.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             return resultsParsing;
         }
@@ -140,14 +140,14 @@ public class VinParser {
             }
 
         } catch (FileNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VinParser.class.getName())
+            java.util.logging.Logger.getLogger(WineParser.class.getName())
                     .log(Level.SEVERE, null, ex);
         } finally {
             ps.close();
             try {
                 out.close();
             } catch (IOException ex) {
-                java.util.logging.Logger.getLogger(VinParser.class.getName())
+                java.util.logging.Logger.getLogger(WineParser.class.getName())
                         .log(Level.SEVERE, null, ex);
             }
         }
