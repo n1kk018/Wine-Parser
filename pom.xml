@@ -9,27 +9,26 @@
         <java.version>1.8</java.version>
         <maven.plugin.compiler>3.5.1</maven.plugin.compiler>
         <log4j.version>1.2.16</log4j.version>
-        <hibernate.version>4.3.8.Final</hibernate.version>
-        <mysql.version>5.1.27</mysql.version>
-        <commons.dbcp.version>2.0</commons.dbcp.version>
-        <spring.version>4.0.1.RELEASE</spring.version>
+        <wine-entity.version>1.0</wine-entity.version>
+        <wine-exception.version>1.0</wine-exception.version>
+        <wine-data-product.version>1.0</wine-data-product.version>
     </properties>
     
     <dependencies>
         <dependency>
             <groupId>fr.afcepf.atod</groupId>
             <artifactId>Wine-Entity</artifactId>
-            <version>1.0</version>
+            <version>${wine-entity.version}</version>
         </dependency>
         <dependency>
             <groupId>fr.afcepf.atod</groupId>
             <artifactId>Wine-Exception</artifactId>
-            <version>1.0</version>
+            <version>${wine-exception.version}</version>
         </dependency>
         <dependency>
             <groupId>fr.afcepf.atod</groupId>
             <artifactId>Wine-Data-Product</artifactId>
-            <version>1.0</version>
+            <version>${wine-data-product.version}</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
@@ -37,7 +36,6 @@
             <version>${log4j.version}</version>
         </dependency>
     </dependencies>
-    
     <build>
         <plugins>
             <plugin>
@@ -51,11 +49,4 @@
             </plugin>
         </plugins>
     </build>
-    <repositories>
-        <repository>
-            <id>unknown-jars-temp-repo</id>
-            <name>A temporary repository created by NetBeans for libraries and jars it could not identify. Please replace the dependencies in this repository with correct ones and delete this repository.</name>
-            <url>file:${project.basedir}/lib</url>
-        </repository>
-    </repositories>
 </project>
