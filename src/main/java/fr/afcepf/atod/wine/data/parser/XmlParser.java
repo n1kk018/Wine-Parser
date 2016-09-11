@@ -10,6 +10,11 @@ import fr.afcepf.atod.wine.entity.ProductWine;
 import fr.afcepf.atod.wine.entity.Region;
 import fr.afcepf.atod.wine.entity.Supplier;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -20,6 +25,7 @@ import java.util.logging.Level;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -44,11 +50,23 @@ public class XmlParser {
     private static Map<String,ProductType> types = new HashMap<String,ProductType>();
     private static Map<String,Region> regions = new HashMap<String,Region>();
     private static java.util.List<ProductWine> list = new ArrayList<ProductWine>();
+    private static String apiBaseUrl = "http://services.wine.com/api/beta2/service.svc/xml/";
+    private static String apikey = "37662dd9dbf72936b590e8bdec649a30";
 
     public static void main(String[] args) {
         log.info("\t ### debut du test ###");
+        /*URL url;
+		try {
+			url = new URL(apiBaseUrl+"/categorymap?filter=categories(490)&apikey="+apikey); 
+        	File file = new File("/FilesXML/Wines/categoryMap.xml");
+			FileUtils.copyURLToFile(url, file);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+        
 
-        BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springDataGestionVin.xml");
+        BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springData.xml");
         IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);
 
         Product productRand = new Product(null, "pre", 500.0, "un produit");
@@ -79,6 +97,7 @@ public class XmlParser {
 	        suppliersAccessorie.add(supplier1);
 	        productAccessorie.setStockSuppliers(suppliersAccessorie);
 	        daoVin.insertObj(productAccessorie);
+	        
 	        for(int i=1;i<7;i++){
 	        	list = parseSampleXml("FilesXML/wines"+i+".xml");
 		        Integer cpt = 0;
@@ -130,6 +149,9 @@ public class XmlParser {
 		NodeList wineInfos = itemNode.getChildNodes();
 		p.setName(extractNameFromSubNodeList(wineInfos));
 		for(int i = 0; i<wineInfos.getLength();i++){
+			if(wineInfos.item(i).getNodeName().equals("Id")){
+				p.setApiId(Integer.parseInt(wineInfos.item(i).getTextContent()));
+			}
 			if(wineInfos.item(i).getNodeName().equals("Vintage")){
 				try{
 					p.setVintage(Integer.parseInt(wineInfos.item(i).getTextContent()));
