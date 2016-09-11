@@ -51,11 +51,11 @@ public class XmlParser {
     private static Map<String,ProductVintage> vintages = new HashMap<String,ProductVintage>();
     private static java.util.List<ProductWine> list = new ArrayList<ProductWine>();
     private static String apiBaseUrl = "http://services.wine.com/api/beta2/service.svc/xml/";
-    private static String apikey = "37662dd9dbf72936b590e8bdec649a30";
+    private static String apikey = "";
 
     public static void main(String[] args) {
         log.info("\t ### debut du test ###");
-        /*URL url;
+        URL url;
 		try {
 			url = new URL(apiBaseUrl+"/categorymap?filter=categories(490)&apikey="+apikey); 
         	File file = new File("/FilesXML/Wines/categoryMap.xml");
@@ -63,7 +63,7 @@ public class XmlParser {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*/
+		}
         
 
         BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springData.xml");
