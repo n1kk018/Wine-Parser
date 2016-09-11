@@ -6,8 +6,8 @@ import fr.afcepf.atod.wine.entity.Product;
 import fr.afcepf.atod.wine.entity.ProductAccessories;
 import fr.afcepf.atod.wine.entity.ProductType;
 import fr.afcepf.atod.wine.entity.ProductVarietal;
+import fr.afcepf.atod.wine.entity.ProductVintage;
 import fr.afcepf.atod.wine.entity.ProductWine;
-import fr.afcepf.atod.wine.entity.Region;
 import fr.afcepf.atod.wine.entity.Supplier;
 
 import java.util.ArrayList;
@@ -42,13 +42,13 @@ public class XmlParser {
     private static Logger log = Logger.getLogger(XmlParser.class);
     private static Map<String,ProductVarietal> varietals = new HashMap<String,ProductVarietal>();
     private static Map<String,ProductType> types = new HashMap<String,ProductType>();
-    private static Map<String,Region> regions = new HashMap<String,Region>();
+    private static Map<String,ProductVintage> vintages = new HashMap<String,ProductVintage>();
     private static java.util.List<ProductWine> list = new ArrayList<ProductWine>();
 
     public static void main(String[] args) {
         log.info("\t ### debut du test ###");
 
-        BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springDataGestionVin.xml");
+        BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springData.xml");
         IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);
 
         Product productRand = new Product(null, "pre", 500.0, "un produit");
@@ -131,18 +131,13 @@ public class XmlParser {
 		p.setName(extractNameFromSubNodeList(wineInfos));
 		for(int i = 0; i<wineInfos.getLength();i++){
 			if(wineInfos.item(i).getNodeName().equals("Vintage")){
-				try{
-					p.setVintage(Integer.parseInt(wineInfos.item(i).getTextContent()));
-				}catch(NumberFormatException e) {
-					p.setVintage(null);
-				}
+				p.setProductVintage(getWineVintage(wineInfos.item(i)));
 			}
 			if(wineInfos.item(i).getNodeName().equals("PriceRetail")){
 				p.setPrice(Double.valueOf(wineInfos.item(i).getTextContent()));
 			}
 			if(wineInfos.item(i).getNodeName().equals("Appellation")){
 				p.setAppellation(extractNameFromSubNodeList(wineInfos.item(i).getChildNodes()));	
-				p.setRegion(getWineRegion(wineInfos.item(i)));
 			}
 			if(wineInfos.item(i).getNodeName().equals("Varietal")){
 				
@@ -157,6 +152,24 @@ public class XmlParser {
     	return p;
     }
     
+    private static ProductVintage getWineVintage(Node VintageNode){
+    	String vintage = VintageNode.getTextContent();
+    	ProductVintage oVintage=null;
+    	try{
+    		if(vintage!=null) {
+    			if(vintages.containsKey(vintage)==false) {
+    				oVintage = new ProductVintage(null,Integer.parseInt(vintage));
+    				vintages.put(vintage, oVintage);
+    			} else {
+    				oVintage = (ProductVintage)vintages.get(vintage);
+    			}
+    		}
+		}catch(NumberFormatException e) {
+			//
+		}
+    	return oVintage;
+    }
+    
     private static ProductVarietal getWineVarietal(Node varietalNode){
     	String varietal = extractNameFromSubNodeList(varietalNode.getChildNodes());
 		ProductVarietal oVarietal=null;
@@ -168,23 +181,7 @@ public class XmlParser {
 		}
     	return oVarietal;
     }
-    
-    private static Region getWineRegion(Node appellationNode){
-    	Region oRegion = new Region();
-    	for(int j = 0; j<appellationNode.getChildNodes().getLength();j++){
-			if(appellationNode.getChildNodes().item(j).getNodeName().equals("Region")){
-				String region = extractNameFromSubNodeList(appellationNode.getChildNodes().item(j).getChildNodes());
-				if(regions.containsKey(region)==false) {
-					oRegion = new Region(null,region,null);
-					regions.put(region, oRegion);
-				} else {
-					oRegion = (Region)regions.get(region);
-				}
-			}
-    	}
-    	return oRegion;
-    }
-    
+        
     private static ProductType getWineType(Node varietal){
     	ProductType oType=null;
     	for(int j = 0; j<varietal.getChildNodes().getLength();j++){
