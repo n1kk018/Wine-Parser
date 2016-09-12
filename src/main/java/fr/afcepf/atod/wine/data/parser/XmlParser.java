@@ -14,7 +14,11 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -58,8 +62,64 @@ public class XmlParser {
         URL url;
 		try {
 			url = new URL(apiBaseUrl+"/categorymap?filter=categories(490)&apikey="+apikey); 
-        	File file = new File("/FilesXML/Wines/categoryMap.xml");
-			FileUtils.copyURLToFile(url, file);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/ategoryMap.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/categoryMap.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 vins rouges fr au dela de 100 € 
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+124)+price(100)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/RedWines100.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/RedWines100.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 vins rouges fr entre 50 et 100€
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+124)+price(50|100)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/RedWines50-100.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/RedWines50-100.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 vins rouges fr entre 10 et 50€
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+124)+price(10|50)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/RedWines10-50.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/RedWines10-50.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 vins blancs fr au dela de 100 € 
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+125)+price(100)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/WhiteWines100.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/WhiteWines100.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 vins blancs fr entre 50 et 100€
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+125)+price(50|100)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/WhiteWines50-100.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/WhiteWines50-100.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 vins blancs fr entre 10 et 50€
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+125)+price(10|50)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/WhiteWines10-50.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/WhiteWines10-50.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 champagnes fr au dela de 100 € 
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+123)+price(100)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/ChampagneWines100.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/ChampagneWines100.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 champagnes fr entre 50 et 100€ 
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+123)+price(50|100)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/ChampagneWines50-100.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/ChampagneWines50-100.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 vins rosés fr
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+126)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/RoseWines10-50.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/RoseWines10-50.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}        	            
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -98,27 +158,44 @@ public class XmlParser {
 	        productAccessorie.setStockSuppliers(suppliersAccessorie);
 	        daoVin.insertObj(productAccessorie);
 	        
-	        for(int i=1;i<7;i++){
-	        	list = parseSampleXml("FilesXML/wines"+i+".xml");
-		        Integer cpt = 0;
-		        for (ProductWine productWine: list) {
-		        	Set<Supplier> supplierWine = new HashSet<>();
-		        	supplierWine.add(supplier1);
-		        	if(cpt%2==0) {
-		        		supplierWine.add(supplier2);
-		        	}else if(cpt%3==0) {
-		        		supplierWine.add(supplier3);
-		        	}
-		        	productWine.setStockSuppliers(supplierWine);
-		        	daoVin.insertObj(productWine);
-		        	cpt++;
-				}
-	        }
+	        for (Path filepath : Files.newDirectoryStream(Paths.get(getResourcePath()+"FilesXML/Wines/"))) {
+	        	if(filepath.getFileName().toString().contains("xml")){
+		        	list = parseSampleXml("FilesXML/Wines/"+filepath.getFileName());
+		        	Integer cpt = 0;
+			        for (ProductWine productWine: list) {
+			        	Set<Supplier> supplierWine = new HashSet<>();
+			        	supplierWine.add(supplier1);
+			        	if(cpt%2==0) {
+			        		supplierWine.add(supplier2);
+			        	}else if(cpt%3==0) {
+			        		supplierWine.add(supplier3);
+			        	}
+			        	productWine.setStockSuppliers(supplierWine);
+			        	daoVin.insertObj(productWine);
+			        	cpt++;
+					}
+	        	}
+			}
         } catch (WineException ex) {
             java.util.logging.Logger.getLogger(XmlParser.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+        } catch (IOException e) {
+        	java.util.logging.Logger.getLogger(XmlParser.class.getName()).log(Level.SEVERE, null, e);
+		}
+        //http://cdn.fluidretail.net/customers/c1477/13/68/80/_s/pi/n/136880_spin_spin2/main_variation_na_view_01_204x400.jpg
         log.info("\t ### Fin du test ###");
+    }
+    
+    private static String getResourcePath() {
+        try {
+            URI resourcePathFile = System.class.getResource("/RESOURCE_PATH").toURI();
+            String resourcePath = Files.readAllLines(Paths.get(resourcePathFile)).get(0);
+            URI rootURI = new File("").toURI();
+            URI resourceURI = new File(resourcePath).toURI();
+            URI relativeResourceURI = rootURI.relativize(resourceURI);
+            return relativeResourceURI.getPath();
+        } catch (Exception e) {
+            return null;
+        }
     }
     
     public static java.util.List<ProductWine> parseSampleXml(String fileName) throws WineException
