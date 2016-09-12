@@ -2,8 +2,10 @@ package fr.afcepf.atod.wine.data.parser;
 
 import fr.afcepf.atod.vin.data.exception.WineException;
 import fr.afcepf.atod.wine.data.product.api.IDaoProduct;
+import fr.afcepf.atod.wine.data.product.api.IDaoSupplier;
 import fr.afcepf.atod.wine.entity.Product;
 import fr.afcepf.atod.wine.entity.ProductAccessories;
+import fr.afcepf.atod.wine.entity.ProductSupplier;
 import fr.afcepf.atod.wine.entity.ProductType;
 import fr.afcepf.atod.wine.entity.ProductVarietal;
 import fr.afcepf.atod.wine.entity.ProductVintage;
@@ -23,6 +25,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
@@ -30,6 +33,7 @@ import java.util.logging.Level;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -128,18 +132,12 @@ public class XmlParser {
 
         BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springData.xml");
         IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);
+        IDaoSupplier daoSupplier = (IDaoSupplier) bf.getBean(IDaoSupplier.class);
 
         Product productRand = new Product(null, "pre", 500.0, "un produit");
 
         Product productAccessorie = new ProductAccessories(null, "un mug",
                 25.0, "un beau mug", new Date());
-
-        Supplier supplier1 = new Supplier(null, "Aux bon vins de Bourgogne",
-                "05 85 74 85 69",
-                "vinsbourgogne@gmail.com", new Date());
-        Supplier supplier2 = new Supplier(null, "Aux bon vins de Bordeaux",
-                "04 85 74 85 69",
-                "vinsbordeaux@gmail.com", new Date());
         Supplier supplier3 = new Supplier(null, "Aux bon vins de l'Aude",
                 "07 85 74 85 69",
                 "vinsaude@gmail.com", new Date());
@@ -148,12 +146,28 @@ public class XmlParser {
 	        //quantité de données. Cependant, les performances de ceux-ci peuvent
 	        //être amoindries en insertion. Généralement, on opte pour un HashSet,
 	        //car il est plus performant en temps d'accès 
-	        Set<Supplier> suppliersRand = new HashSet<Supplier>();
-	        suppliersRand.add(supplier1);
-	        suppliersRand.add(supplier2);
-	        productRand.setStockSuppliers(suppliersRand);
+	        ProductSupplier productSuppliers1 = new ProductSupplier();
+	        ProductSupplier productSuppliers2 = new ProductSupplier();
+	        productSuppliers1.setProduct(productRand);
+	        productSuppliers1.setSupplier(daoSupplier.insertObj( new Supplier(null, "Aux bon vins de Bourgogne",
+																	                "05 85 74 85 69",
+																	                "vinsbourgogne@gmail.com", new Date())));
+	        productSuppliers1.setQuantity(30);
+	        
+	        
+	        productSuppliers2.setProduct(productRand);
+	        productSuppliers2.setSupplier(daoSupplier.insertObj(new Supplier(null, "Aux bon vins de Bordeaux",
+																	                "04 85 74 85 69",
+																	                "vinsbordeaux@gmail.com", new Date())));
+	        productSuppliers2.setQuantity(15);
+	       	        
+	        /*supplier1.getProductSuppliers().add(productSuppliers1);
+	        supplier2.getProductSuppliers().add(productSuppliers2);*/
+	        productRand.getProductSuppliers().add(productSuppliers1);
+	        productRand.getProductSuppliers().add(productSuppliers2);
 	        daoVin.insertObj(productRand);
-	        Set<Supplier> suppliersAccessorie= new HashSet<Supplier>();
+	        
+	        /*Set<Supplier> suppliersAccessorie= new HashSet<Supplier>();
 	        suppliersAccessorie.add(supplier1);
 	        productAccessorie.setStockSuppliers(suppliersAccessorie);
 	        daoVin.insertObj(productAccessorie);
@@ -175,12 +189,12 @@ public class XmlParser {
 			        	cpt++;
 					}
 	        	}
-			}
+			}*/
         } catch (WineException ex) {
             java.util.logging.Logger.getLogger(XmlParser.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException e) {
+        } /*catch (IOException e) {
         	java.util.logging.Logger.getLogger(XmlParser.class.getName()).log(Level.SEVERE, null, e);
-		}
+		}*/
         //http://cdn.fluidretail.net/customers/c1477/13/68/80/_s/pi/n/136880_spin_spin2/main_variation_na_view_01_204x400.jpg
         log.info("\t ### Fin du test ###");
     }
@@ -224,8 +238,9 @@ public class XmlParser {
     private static ProductWine setWine(Node itemNode) {
     	ProductWine p = new ProductWine();
 		NodeList wineInfos = itemNode.getChildNodes();
-		p.setName(extractNameFromSubNodeList(wineInfos));
-		for(int i = 0; i<wineInfos.getLength();i++){
+		p.setName(extractFieldFromSubNodeList(wineInfos,"Name"));
+		List<String> picsUrl = new ArrayList<String>();
+ 		for(int i = 0; i<wineInfos.getLength();i++){
 			if(wineInfos.item(i).getNodeName().equals("Id")){
 				p.setApiId(Integer.parseInt(wineInfos.item(i).getTextContent()));
 			}
@@ -236,7 +251,13 @@ public class XmlParser {
 				p.setPrice(Double.valueOf(wineInfos.item(i).getTextContent()));
 			}
 			if(wineInfos.item(i).getNodeName().equals("Appellation")){
-				p.setAppellation(extractNameFromSubNodeList(wineInfos.item(i).getChildNodes()));	
+				p.setAppellation(extractFieldFromSubNodeList(wineInfos.item(i).getChildNodes(),"Name"));	
+			}
+			if(wineInfos.item(i).getNodeName().equals("Labels")){
+				getLabelsUrl(wineInfos.item(i),picsUrl);	
+			}
+			if(wineInfos.item(i).getNodeName().equals("Vineyard")){
+				getVineyardPicUrl(wineInfos.item(i),picsUrl);	
 			}
 			if(wineInfos.item(i).getNodeName().equals("Varietal")){
 				
@@ -248,6 +269,7 @@ public class XmlParser {
 				p.setDescription(getWineDescription(wineInfos.item(i)));
 			}
 		}
+ 		p.setImagesUrl(StringUtils.join(picsUrl.iterator(),"|"));
     	return p;
     }
     
@@ -269,8 +291,18 @@ public class XmlParser {
     	return oVintage;
     }
     
+    private static void getVineyardPicUrl(Node vineyardNode,List<String> list){
+    	list.add(extractFieldFromSubNodeList(vineyardNode.getChildNodes(),"ImageUrl"));
+    }
+    
+    private static void getLabelsUrl(Node labelsNode,List<String> list){
+    	for(int j = 0; j<labelsNode.getChildNodes().getLength();j++){
+    		list.add(extractFieldFromSubNodeList(labelsNode.getChildNodes().item(j).getChildNodes(),"Url"));
+    	}
+    }
+    
     private static ProductVarietal getWineVarietal(Node varietalNode){
-    	String varietal = extractNameFromSubNodeList(varietalNode.getChildNodes());
+    	String varietal = extractFieldFromSubNodeList(varietalNode.getChildNodes(),"Name");
 		ProductVarietal oVarietal=null;
 		if(varietals.containsKey(varietal)==false) {
 			oVarietal = new ProductVarietal(null,varietal);
@@ -285,7 +317,7 @@ public class XmlParser {
     	ProductType oType=null;
     	for(int j = 0; j<varietal.getChildNodes().getLength();j++){
 			if(varietal.getChildNodes().item(j).getNodeName().equals("WineType")){
-				String type = extractNameFromSubNodeList(varietal.getChildNodes().item(j).getChildNodes());
+				String type = extractFieldFromSubNodeList(varietal.getChildNodes().item(j).getChildNodes(),"Name");
 				if(types.containsKey(type)==false) {
 					oType = new ProductType(null,type);
 					types.put(type, oType);
@@ -304,18 +336,18 @@ public class XmlParser {
 				if(j>0){
 					description=description+"|";
 				}
-				description=description+extractNameFromSubNodeList(attributes.getChildNodes().item(j).getChildNodes());
+				description=description+extractFieldFromSubNodeList(attributes.getChildNodes().item(j).getChildNodes(),"Name");
 			}
 		}
 		return description;
 		
     }
     
-    private static String extractNameFromSubNodeList(NodeList subNodes)
+    private static String extractFieldFromSubNodeList(NodeList subNodes,String fieldName)
     {
     	String name = null;
     	for(int i = 0; i<subNodes.getLength();i++){
-    		if(subNodes.item(i).getNodeName().equals("Name")){
+    		if(subNodes.item(i).getNodeName().equals(fieldName)){
     			name = subNodes.item(i).getTextContent();
     		}
     	}

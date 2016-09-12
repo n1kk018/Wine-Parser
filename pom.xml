@@ -17,16 +17,6 @@
     <dependencies>
         <dependency>
             <groupId>fr.afcepf.atod</groupId>
-            <artifactId>Wine-Entity</artifactId>
-            <version>${wine-entity.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>fr.afcepf.atod</groupId>
-            <artifactId>Wine-Exception</artifactId>
-            <version>${wine-exception.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>fr.afcepf.atod</groupId>
             <artifactId>Wine-Data-Product</artifactId>
             <version>${wine-data-product.version}</version>
         </dependency>
@@ -39,6 +29,11 @@
 		    <groupId>commons-io</groupId>
 		    <artifactId>commons-io</artifactId>
 		    <version>2.5</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>3.4</version>
 		</dependency>
     </dependencies>
     <build>
