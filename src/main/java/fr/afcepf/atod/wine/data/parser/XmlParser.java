@@ -13,6 +13,7 @@ import fr.afcepf.atod.wine.entity.ProductWine;
 import fr.afcepf.atod.wine.entity.Supplier;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -22,6 +23,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -33,6 +35,7 @@ import java.util.logging.Level;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.BeanFactory;
@@ -63,7 +66,7 @@ public class XmlParser {
 
     public static void main(String[] args) {
         log.info("\t ### debut du test ###");
-        URL url;
+        /*URL url;
 		try {
 			url = new URL(apiBaseUrl+"/categorymap?filter=categories(490)&apikey="+apikey); 
         	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/ategoryMap.xml"))==false){
@@ -129,18 +132,16 @@ public class XmlParser {
 			e.printStackTrace();
 		}
         
-
         BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springData.xml");
         IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);
         IDaoSupplier daoSupplier = (IDaoSupplier) bf.getBean(IDaoSupplier.class);
 
         Product productRand = new Product(null, "pre", 500.0, "un produit");
 
-        Product productAccessorie = new ProductAccessories(null, "un mug",
-                25.0, "un beau mug", new Date());
-        Supplier supplier3 = new Supplier(null, "Aux bon vins de l'Aude",
-                "07 85 74 85 69",
-                "vinsaude@gmail.com", new Date());
+        Product productAccessorie = new ProductAccessories(null, "un mug",25.0, "un beau mug", new Date());
+        Supplier supplier1 = new Supplier(null, "Aux bon vins de Bourgogne","05 85 74 85 69","vinsbourgogne@gmail.com", new Date());
+        Supplier supplier2 = new Supplier(null, "Aux bon vins de Bordeaux","04 85 74 85 69","vinsbordeaux@gmail.com", new Date());
+        Supplier supplier3 = new Supplier(null, "Aux bon vins de l'Aude","07 85 74 85 69","vinsaude@gmail.com", new Date());
         try {
 	        //Les Set sont particulièrement adaptés pour manipuler une grande
 	        //quantité de données. Cependant, les performances de ceux-ci peuvent
@@ -149,27 +150,20 @@ public class XmlParser {
 	        ProductSupplier productSuppliers1 = new ProductSupplier();
 	        ProductSupplier productSuppliers2 = new ProductSupplier();
 	        productSuppliers1.setProduct(productRand);
-	        productSuppliers1.setSupplier(daoSupplier.insertObj( new Supplier(null, "Aux bon vins de Bourgogne",
-																	                "05 85 74 85 69",
-																	                "vinsbourgogne@gmail.com", new Date())));
+	        productSuppliers1.setSupplier(daoSupplier.insertObj(supplier1));
 	        productSuppliers1.setQuantity(30);
-	        
-	        
 	        productSuppliers2.setProduct(productRand);
-	        productSuppliers2.setSupplier(daoSupplier.insertObj(new Supplier(null, "Aux bon vins de Bordeaux",
-																	                "04 85 74 85 69",
-																	                "vinsbordeaux@gmail.com", new Date())));
+	        productSuppliers2.setSupplier(daoSupplier.insertObj(supplier2));
 	        productSuppliers2.setQuantity(15);
-	       	        
-	        /*supplier1.getProductSuppliers().add(productSuppliers1);
-	        supplier2.getProductSuppliers().add(productSuppliers2);*/
 	        productRand.getProductSuppliers().add(productSuppliers1);
 	        productRand.getProductSuppliers().add(productSuppliers2);
 	        daoVin.insertObj(productRand);
 	        
-	        /*Set<Supplier> suppliersAccessorie= new HashSet<Supplier>();
-	        suppliersAccessorie.add(supplier1);
-	        productAccessorie.setStockSuppliers(suppliersAccessorie);
+	        ProductSupplier productSuppliers3 = new ProductSupplier();
+	        productSuppliers3.setProduct(productAccessorie);
+	        productSuppliers3.setSupplier(daoSupplier.insertObj(supplier3));
+	        productSuppliers3.setQuantity(20);
+	        productAccessorie.getProductSuppliers().add(productSuppliers3);
 	        daoVin.insertObj(productAccessorie);
 	        
 	        for (Path filepath : Files.newDirectoryStream(Paths.get(getResourcePath()+"FilesXML/Wines/"))) {
@@ -177,26 +171,109 @@ public class XmlParser {
 		        	list = parseSampleXml("FilesXML/Wines/"+filepath.getFileName());
 		        	Integer cpt = 0;
 			        for (ProductWine productWine: list) {
-			        	Set<Supplier> supplierWine = new HashSet<>();
-			        	supplierWine.add(supplier1);
+			        	ProductSupplier ps = new ProductSupplier();
+			        	ps.setProduct(productWine);
+				        ps.setSupplier(supplier1);
+				        ps.setQuantity(randomWithRange(1,50));
+				        productWine.getProductSuppliers().add(ps);
 			        	if(cpt%2==0) {
-			        		supplierWine.add(supplier2);
+			        		ProductSupplier ps2 = new ProductSupplier();
+			        		ps2.setProduct(productWine);
+			        		ps2.setSupplier(supplier2);
+			        		ps2.setQuantity(randomWithRange(1,50));
+					        productWine.getProductSuppliers().add(ps2);
 			        	}else if(cpt%3==0) {
-			        		supplierWine.add(supplier3);
+			        		ProductSupplier ps3 = new ProductSupplier();
+			        		ps3.setProduct(productWine);
+			        		ps3.setSupplier(supplier3);
+			        		ps3.setQuantity(randomWithRange(1,50));
+					        productWine.getProductSuppliers().add(ps3);
 			        	}
-			        	productWine.setStockSuppliers(supplierWine);
 			        	daoVin.insertObj(productWine);
 			        	cpt++;
 					}
 	        	}
-			}*/
+			}
         } catch (WineException ex) {
             java.util.logging.Logger.getLogger(XmlParser.class.getName()).log(Level.SEVERE, null, ex);
-        } /*catch (IOException e) {
+        } catch (IOException e) {
         	java.util.logging.Logger.getLogger(XmlParser.class.getName()).log(Level.SEVERE, null, e);
 		}*/
+        /*BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springData.xml");
+        IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);*/
+		try {
+			BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springData.xml");
+	        IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);
+	        List<Product> list = daoVin.findAllObj();
+	        for (Product product : list) {
+	        	String imagesUrl = ((ProductWine)product).getImagesUrl();
+	        	String xmlId = ((ProductWine)product).getApiId().toString();
+	        	String [] urls = imagesUrl.split("\\|");
+	        	for (int i = 0; i < urls.length; i++) {
+					if(urls[i].trim()!=""){
+						URL url = new URL(urls[i].trim());
+						String filename = FilenameUtils.getBaseName(url.toString())+"."+FilenameUtils.getExtension(url.toString());
+						if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+filename))==false){
+				    		File file = new File(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+filename);
+				    		try {
+								FileUtils.copyURLToFile(url, file);
+							} catch (FileNotFoundException e) {
+								
+							}
+				    	}
+						if(filename==xmlId+"m.jpg"){
+							if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+xmlId+"l.jpg"))==false){
+					    		File file = new File(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+xmlId+"l.jpg");
+					    		URL url2 = new URL(urls[i].trim().replace("m.jpg", "l.jpg"));
+					    		try {
+									FileUtils.copyURLToFile(url2, file);
+								} catch (FileNotFoundException e) {
+									
+								}
+					    	}
+						}
+					}
+				}
+		    	
+	        	/*if(xmlId.length()==6){
+					URL url = new URL("http://cdn.fluidretail.net/customers/c1477/"+xmlId.substring(0, 2)+"/"+xmlId.substring(2,4)+"/"+xmlId.substring(4)+"/_s/pi/n/"+xmlId+"_spin_spin2/main_variation_na_view_01_204x400.jpg");
+			    	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+xmlId+"_front.jpg"))==false){
+			    		File file = new File(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+xmlId+"_front.jpg");
+			    		try {
+							FileUtils.copyURLToFile(url, file);
+						} catch (FileNotFoundException e) {
+							
+						}
+			    	}
+			    	URL url2 = new URL("http://cdn.fluidretail.net/customers/c1477/"+xmlId.substring(0, 2)+"/"+xmlId.substring(2,4)+"/"+xmlId.substring(4)+"/_s/pi/n/"+xmlId+"_spin_spin2/main_variation_na_view_07_204x400.jpg");
+			    	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+xmlId+"_back.jpg"))==false){
+			    		File file = new File(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+xmlId+"_back.jpg");
+			    		try {
+			    			FileUtils.copyURLToFile(url2, file);
+			    		} catch (FileNotFoundException e) {
+							
+						}
+			    	}
+				}*/
+	        }
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (WineException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
         //http://cdn.fluidretail.net/customers/c1477/13/68/80/_s/pi/n/136880_spin_spin2/main_variation_na_view_01_204x400.jpg
         log.info("\t ### Fin du test ###");
+    }
+    
+    private static int randomWithRange(int min, int max)
+    {
+	   int range = (max - min) + 1;     
+	   return (int)(Math.random() * range) + min;
     }
     
     private static String getResourcePath() {
