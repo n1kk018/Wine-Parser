@@ -66,7 +66,7 @@ public class XmlParser {
 
     public static void main(String[] args) {
         log.info("\t ### debut du test ###");
-        /*URL url;
+        URL url;
 		try {
 			url = new URL(apiBaseUrl+"/categorymap?filter=categories(490)&apikey="+apikey); 
         	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/ategoryMap.xml"))==false){
@@ -198,9 +198,9 @@ public class XmlParser {
             java.util.logging.Logger.getLogger(XmlParser.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException e) {
         	java.util.logging.Logger.getLogger(XmlParser.class.getName()).log(Level.SEVERE, null, e);
-		}*/
+		}
         /*BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springData.xml");
-        IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);*/
+        IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);
 		try {
 			BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springData.xml");
 	        IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);
@@ -235,7 +235,7 @@ public class XmlParser {
 					}
 				}
 		    	
-	        	/*if(xmlId.length()==6){
+	        	if(xmlId.length()==6){
 					URL url = new URL("http://cdn.fluidretail.net/customers/c1477/"+xmlId.substring(0, 2)+"/"+xmlId.substring(2,4)+"/"+xmlId.substring(4)+"/_s/pi/n/"+xmlId+"_spin_spin2/main_variation_na_view_01_204x400.jpg");
 			    	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+xmlId+"_front.jpg"))==false){
 			    		File file = new File(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+xmlId+"_front.jpg");
@@ -254,7 +254,7 @@ public class XmlParser {
 							
 						}
 			    	}
-				}*/
+				}
 	        }
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
@@ -266,7 +266,7 @@ public class XmlParser {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
-        //http://cdn.fluidretail.net/customers/c1477/13/68/80/_s/pi/n/136880_spin_spin2/main_variation_na_view_01_204x400.jpg
+        //http://cdn.fluidretail.net/customers/c1477/13/68/80/_s/pi/n/136880_spin_spin2/main_variation_na_view_01_204x400.jpg*/
         log.info("\t ### Fin du test ###");
     }
     
