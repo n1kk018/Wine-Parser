@@ -1,0 +1,158 @@
+<DATA>
+
+	<ROW>
+		<id>1</id>
+		<name>South America</name>
+		<idCountry>4</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>2</id>
+		<name>California</name>
+		<idCountry>5</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>3</id>
+		<name>France - Bordeaux</name>
+		<idCountry>1</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>4</id>
+		<name>France - Rhone</name>
+		<idCountry>1</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>5</id>
+		<name>Australia</name>
+		<idCountry>8</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>6</id>
+		<name>Italy</name>
+		<idCountry>2</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>7</id>
+		<name>Spain</name>
+		<idCountry>7</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>8</id>
+		<name>Washington</name>
+		<idCountry>5</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>9</id>
+		<name>Oregon</name>
+		<idCountry>5</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>10</id>
+		<name>France - Other regions</name>
+		<idCountry>1</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>11</id>
+		<name>New Zealand</name>
+		<idCountry>11</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>12</id>
+		<name>Germany</name>
+		<idCountry>12</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>13</id>
+		<name>South Africa</name>
+		<idCountry>3</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>14</id>
+		<name>Portugal</name>
+		<idCountry>13</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>15</id>
+		<name>Other US</name>
+		<idCountry>5</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>16</id>
+		<name>Other Europe</name>
+		<idCountry>14</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>17</id>
+		<name>Canada</name>
+		<idCountry>10</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>19</id>
+		<name>Japan</name>
+		<idCountry>9</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>20</id>
+		<name>Bordeaux</name>
+		<idCountry>1</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>21</id>
+		<name>Ile de France</name>
+		<idCountry>1</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>22</id>
+		<name>Bourgogne</name>
+		<idCountry>1</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>23</id>
+		<name>Loire</name>
+		<idCountry>1</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>24</id>
+		<name>Alsace</name>
+		<idCountry>1</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>25</id>
+		<name>Aude</name>
+		<idCountry>1</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>26</id>
+		<name>Provence</name>
+		<idCountry>1</idCountry>
+	</ROW>
+
+	<ROW>
+		<id>27</id>
+		<name>Corse</name>
+		<idCountry>1</idCountry>
+	</ROW>
+</DATA>

@@ -1,0 +1,72 @@
+<DATA>
+
+	<ROW>
+		<id>1</id>
+		<name>France</name>
+	</ROW>
+
+	<ROW>
+		<id>2</id>
+		<name>Italie</name>
+	</ROW>
+
+	<ROW>
+		<id>3</id>
+		<name>Afrique du Sud</name>
+	</ROW>
+
+	<ROW>
+		<id>4</id>
+		<name>Chili</name>
+	</ROW>
+
+	<ROW>
+		<id>5</id>
+		<name>Etats-Unis</name>
+	</ROW>
+
+	<ROW>
+		<id>6</id>
+		<name>Argentine</name>
+	</ROW>
+
+	<ROW>
+		<id>7</id>
+		<name>Espagne</name>
+	</ROW>
+
+	<ROW>
+		<id>8</id>
+		<name>Australie</name>
+	</ROW>
+
+	<ROW>
+		<id>9</id>
+		<name>Japon</name>
+	</ROW>
+
+	<ROW>
+		<id>10</id>
+		<name>Canada</name>
+	</ROW>
+
+	<ROW>
+		<id>11</id>
+		<name>New zeland</name>
+	</ROW>
+
+	<ROW>
+		<id>12</id>
+		<name>Allemagne</name>
+	</ROW>
+
+	<ROW>
+		<id>13</id>
+		<name>Portugal</name>
+	</ROW>
+
+	<ROW>
+		<id>14</id>
+		<name>Grece</name>
+	</ROW>
+</DATA>

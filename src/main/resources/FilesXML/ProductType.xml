@@ -1,0 +1,22 @@
+<DATA>
+
+	<ROW>
+		<id>1</id>
+		<type>Champagne &amp; Sparkling</type>
+	</ROW>
+
+	<ROW>
+		<id>2</id>
+		<type>Red Wines</type>
+	</ROW>
+
+	<ROW>
+		<id>3</id>
+		<type>Rosé Wine</type>
+	</ROW>
+
+	<ROW>
+		<id>4</id>
+		<type>White Wines</type>
+	</ROW>
+</DATA>

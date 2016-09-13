@@ -1,0 +1,26 @@
+<DATA>
+
+	<ROW>
+		<id>1</id>
+		<companyName>TRANSGOURMET</companyName>
+		<createdAt>2010-09-09 00:00:00</createdAt>
+		<mail>communication@transgourmet.fr</mail>
+		<phoneNumber>08 11 65 65 80</phoneNumber>
+	</ROW>
+
+	<ROW>
+		<id>2</id>
+		<companyName>Dixvins</companyName>
+		<createdAt>2011-05-05 00:00:00</createdAt>
+		<mail>vinsbourgogne@gmail.com</mail>
+		<phoneNumber>03 86 66 03 70</phoneNumber>
+	</ROW>
+
+	<ROW>
+		<id>3</id>
+		<companyName>Gerard Bertrand</companyName>
+		<createdAt>2009-10-13 00:00:00</createdAt>
+		<mail>vins@gerard-bertrand.com</mail>
+		<phoneNumber>04 68 45 28 50</phoneNumber>
+	</ROW>
+</DATA>
