@@ -1,8 +1,14 @@
 package fr.afcepf.atod.wine.data.parser;
 
 import fr.afcepf.atod.vin.data.exception.WineException;
+import fr.afcepf.atod.wine.data.admin.api.IDaoAdmin;
+import fr.afcepf.atod.wine.data.admin.api.IDaoAdress;
+import fr.afcepf.atod.wine.data.admin.api.IDaoSpecialEvent;
 import fr.afcepf.atod.wine.data.product.api.IDaoProduct;
 import fr.afcepf.atod.wine.data.product.api.IDaoSupplier;
+import fr.afcepf.atod.wine.entity.Admin;
+import fr.afcepf.atod.wine.entity.Adress;
+import fr.afcepf.atod.wine.entity.Civility;
 import fr.afcepf.atod.wine.entity.Product;
 import fr.afcepf.atod.wine.entity.ProductAccessories;
 import fr.afcepf.atod.wine.entity.ProductSupplier;
@@ -10,6 +16,7 @@ import fr.afcepf.atod.wine.entity.ProductType;
 import fr.afcepf.atod.wine.entity.ProductVarietal;
 import fr.afcepf.atod.wine.entity.ProductVintage;
 import fr.afcepf.atod.wine.entity.ProductWine;
+import fr.afcepf.atod.wine.entity.SpecialEvent;
 import fr.afcepf.atod.wine.entity.Supplier;
 
 import java.io.File;
@@ -22,6 +29,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.attribute.DosFileAttributeView;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
@@ -135,7 +143,17 @@ public class XmlParser {
         BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springData.xml");
         IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);
         IDaoSupplier daoSupplier = (IDaoSupplier) bf.getBean(IDaoSupplier.class);
-
+        IDaoAdmin daoAdmin = bf.getBean(IDaoAdmin.class);
+        IDaoAdress daoAdress = bf.getBean(IDaoAdress.class);
+        IDaoSpecialEvent daoEvent = bf.getBean(IDaoSpecialEvent.class);
+        Admin admin=null;
+		try {
+			admin = new Admin(null, "strateur", "admini", new Date(), "nicolastorero@gmail.com", "nicolastorero@gmail.com", "test1234", "0680413240", new Date(), new Date(), Civility.MR,daoAdress.findObj(1));
+			daoAdmin.insertObj(admin);
+		} catch (WineException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
         Product productRand = new Product(null, "pre", 500.0, "un produit");
 
         Product productAccessorie = new ProductAccessories(null, "un mug",25.0, "un beau mug", new Date());
@@ -166,9 +184,13 @@ public class XmlParser {
 	        productAccessorie.getProductSuppliers().add(productSuppliers3);
 	        daoVin.insertObj(productAccessorie);
 	        
+	        SpecialEvent se = new SpecialEvent(null,"Promotest",new Date(),new Date(),new Date(),"10% sur une sélection de produits",true,admin,10);
+	        daoEvent.insertObj(se);
+	        
 	        for (Path filepath : Files.newDirectoryStream(Paths.get(getResourcePath()+"FilesXML/Wines/"))) {
 	        	if(filepath.getFileName().toString().contains("xml")){
 		        	list = parseSampleXml("FilesXML/Wines/"+filepath.getFileName());
+		        	
 		        	Integer cpt = 0;
 			        for (ProductWine productWine: list) {
 			        	ProductSupplier ps = new ProductSupplier();
@@ -188,6 +210,9 @@ public class XmlParser {
 			        		ps3.setSupplier(supplier3);
 			        		ps3.setQuantity(randomWithRange(1,50));
 					        productWine.getProductSuppliers().add(ps3);
+			        	}
+			        	if(cpt<11) {
+			        		productWine.setSpeEvent(se);
 			        	}
 			        	daoVin.insertObj(productWine);
 			        	cpt++;

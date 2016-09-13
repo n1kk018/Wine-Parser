@@ -12,6 +12,7 @@
         <wine-entity.version>1.0</wine-entity.version>
         <wine-exception.version>1.0</wine-exception.version>
         <wine-data-product.version>1.0</wine-data-product.version>
+        <wine-data-admin.version>1.0</wine-data-admin.version>
         <RESOURCE_PATH>${project.basedir}/src/main/resources</RESOURCE_PATH>
     </properties>
     <dependencies>
@@ -19,6 +20,11 @@
             <groupId>fr.afcepf.atod</groupId>
             <artifactId>Wine-Data-Product</artifactId>
             <version>${wine-data-product.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.afcepf.atod</groupId>
+            <artifactId>Wine-Data-Admin</artifactId>
+            <version>${wine-data-admin.version}</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
