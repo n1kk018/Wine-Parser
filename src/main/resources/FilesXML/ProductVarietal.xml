@@ -1,0 +1,122 @@
+<DATA>
+
+	<ROW>
+		<id>1</id>
+		<description>Vintage</description>
+	</ROW>
+
+	<ROW>
+		<id>2</id>
+		<description>Rosé</description>
+	</ROW>
+
+	<ROW>
+		<id>3</id>
+		<description>Non-Vintage</description>
+	</ROW>
+
+	<ROW>
+		<id>4</id>
+		<description>Gamay</description>
+	</ROW>
+
+	<ROW>
+		<id>5</id>
+		<description>Bordeaux Red Blends</description>
+	</ROW>
+
+	<ROW>
+		<id>6</id>
+		<description>Rhone Red Blends</description>
+	</ROW>
+
+	<ROW>
+		<id>7</id>
+		<description>Other Red Blends</description>
+	</ROW>
+
+	<ROW>
+		<id>8</id>
+		<description>Mourvedre</description>
+	</ROW>
+
+	<ROW>
+		<id>9</id>
+		<description>Cabernet Franc</description>
+	</ROW>
+
+	<ROW>
+		<id>10</id>
+		<description>Other Red Wine</description>
+	</ROW>
+
+	<ROW>
+		<id>11</id>
+		<description>Malbec</description>
+	</ROW>
+
+	<ROW>
+		<id>12</id>
+		<description>Pinot Noir</description>
+	</ROW>
+
+	<ROW>
+		<id>13</id>
+		<description>Grenache</description>
+	</ROW>
+
+	<ROW>
+		<id>14</id>
+		<description>Syrah/Shiraz</description>
+	</ROW>
+
+	<ROW>
+		<id>15</id>
+		<description>Chenin Blanc</description>
+	</ROW>
+
+	<ROW>
+		<id>16</id>
+		<description>Chardonnay</description>
+	</ROW>
+
+	<ROW>
+		<id>17</id>
+		<description>Other White Blends</description>
+	</ROW>
+
+	<ROW>
+		<id>18</id>
+		<description>Bordeaux White Blends</description>
+	</ROW>
+
+	<ROW>
+		<id>19</id>
+		<description>Riesling</description>
+	</ROW>
+
+	<ROW>
+		<id>20</id>
+		<description>Other White Wine</description>
+	</ROW>
+
+	<ROW>
+		<id>21</id>
+		<description>Sauvignon Blanc</description>
+	</ROW>
+
+	<ROW>
+		<id>22</id>
+		<description>Pinot Gris/Grigio</description>
+	</ROW>
+
+	<ROW>
+		<id>23</id>
+		<description>Gewurztraminer</description>
+	</ROW>
+
+	<ROW>
+		<id>24</id>
+		<description>Rhone White Blends</description>
+	</ROW>
+</DATA>

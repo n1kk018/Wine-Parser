@@ -1,0 +1,58 @@
+<DATA>
+
+	<ROW>
+		<id>1</id>
+		<billing>1</billing>
+		<number>3</number>
+		<street>rue Danton</street>
+		<idCity>6</idCity>
+	</ROW>
+
+	<ROW>
+		<id>2</id>
+		<billing>1</billing>
+		<number>45</number>
+		<street>avenue des Etats Unis</street>
+		<idCity>3</idCity>
+	</ROW>
+
+	<ROW>
+		<id>3</id>
+		<billing>1</billing>
+		<number>49</number>
+		<street>rue du Faubourg St Denis</street>
+		<idCity>1</idCity>
+	</ROW>
+
+	<ROW>
+		<id>4</id>
+		<billing>1</billing>
+		<number>2</number>
+		<street>place des Bergere</street>
+		<idCity>2</idCity>
+	</ROW>
+
+	<ROW>
+		<id>5</id>
+		<billing>1</billing>
+		<number>9</number>
+		<street>Avenue Rabelais</street>
+		<idCity>7</idCity>
+	</ROW>
+
+	<ROW>
+		<id>6</id>
+		<billing>1</billing>
+		<number>3</number>
+		<street>Avenue Edouard Vaillant</street>
+		<idCity>8</idCity>
+	</ROW>
+
+	<ROW>
+		<id>7</id>
+		<billing>1</billing>
+		<number>5</number>
+		<street>Avenue dee Pekin</street>
+		<idCity>9</idCity>
+	</ROW>
+</DATA>

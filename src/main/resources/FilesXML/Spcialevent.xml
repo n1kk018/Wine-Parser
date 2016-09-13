@@ -1,0 +1,46 @@
+<DATA>
+
+	<ROW>
+		<id>1</id>
+		<activated>1</activated>
+		<createdDate>2015-11-26 00:00:00</createdDate>
+		<description>Profitez de nos offres déstockages et fins de lots !</description>
+		<endDate>2020-12-31 00:00:00</endDate>
+		<startDate>2015-12-01 00:00:00</startDate>
+		<Title>Destockage</Title>
+		<idAdmin>1</idAdmin>
+	</ROW>
+
+	<ROW>
+		<id>2</id>
+		<activated>0</activated>
+		<createdDate>2014-12-01 00:00:00</createdDate>
+		<description>Profitez de 10% de remises sur tous produits</description>
+		<endDate>2014-12-31 00:00:00</endDate>
+		<startDate>2014-12-01 00:00:00</startDate>
+		<Title>Tout à -10%</Title>
+		<idAdmin>1</idAdmin>
+	</ROW>
+
+	<ROW>
+		<id>3</id>
+		<activated>0</activated>
+		<createdDate>2012-01-01 00:00:00</createdDate>
+		<description>Profitez de 5€ de remise sur tous les champagnes</description>
+		<endDate>2012-02-15 00:00:00</endDate>
+		<startDate>2012-01-01 00:00:00</startDate>
+		<Title>Spécial St valentin</Title>
+		<idAdmin>1</idAdmin>
+	</ROW>
+
+	<ROW>
+		<id>4</id>
+		<activated>1</activated>
+		<createdDate>2011-03-01 00:00:00</createdDate>
+		<description>Découvrez les vins califoniens pour à partir -5 €</description>
+		<endDate>2055-01-01 00:00:00</endDate>
+		<startDate>2011-03-15 00:00:00</startDate>
+		<Title>Welcome Califonian Wines</Title>
+		<idAdmin>1</idAdmin>
+	</ROW>
+</DATA>

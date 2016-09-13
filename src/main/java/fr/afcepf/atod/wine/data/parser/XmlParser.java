@@ -1,24 +1,41 @@
 package fr.afcepf.atod.wine.data.parser;
 
 import fr.afcepf.atod.vin.data.exception.WineException;
+import fr.afcepf.atod.wine.data.admin.api.IDaoAdmin;
+import fr.afcepf.atod.wine.data.admin.api.IDaoAdress;
+import fr.afcepf.atod.wine.data.admin.api.IDaoSpecialEvent;
 import fr.afcepf.atod.wine.data.product.api.IDaoProduct;
+import fr.afcepf.atod.wine.data.product.api.IDaoSupplier;
+import fr.afcepf.atod.wine.entity.Admin;
+import fr.afcepf.atod.wine.entity.Adress;
+import fr.afcepf.atod.wine.entity.Civility;
 import fr.afcepf.atod.wine.entity.Product;
 import fr.afcepf.atod.wine.entity.ProductAccessories;
+import fr.afcepf.atod.wine.entity.ProductSupplier;
 import fr.afcepf.atod.wine.entity.ProductType;
 import fr.afcepf.atod.wine.entity.ProductVarietal;
+import fr.afcepf.atod.wine.entity.ProductVintage;
 import fr.afcepf.atod.wine.entity.ProductWine;
-import fr.afcepf.atod.wine.entity.Region;
+import fr.afcepf.atod.wine.entity.SpecialEvent;
 import fr.afcepf.atod.wine.entity.Supplier;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.attribute.DosFileAttributeView;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
@@ -26,6 +43,8 @@ import java.util.logging.Level;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -48,77 +67,251 @@ public class XmlParser {
     private static Logger log = Logger.getLogger(XmlParser.class);
     private static Map<String,ProductVarietal> varietals = new HashMap<String,ProductVarietal>();
     private static Map<String,ProductType> types = new HashMap<String,ProductType>();
-    private static Map<String,Region> regions = new HashMap<String,Region>();
+    private static Map<String,ProductVintage> vintages = new HashMap<String,ProductVintage>();
     private static java.util.List<ProductWine> list = new ArrayList<ProductWine>();
     private static String apiBaseUrl = "http://services.wine.com/api/beta2/service.svc/xml/";
-    private static String apikey = "";
+    private static String apikey = "37662dd9dbf72936b590e8bdec649a30";
 
     public static void main(String[] args) {
         log.info("\t ### debut du test ###");
         /*URL url;
 		try {
 			url = new URL(apiBaseUrl+"/categorymap?filter=categories(490)&apikey="+apikey); 
-        	File file = new File("/FilesXML/Wines/categoryMap.xml");
-			FileUtils.copyURLToFile(url, file);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/ategoryMap.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/categoryMap.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 vins rouges fr au dela de 100 € 
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+124)+price(100)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/RedWines100.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/RedWines100.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 vins rouges fr entre 50 et 100€
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+124)+price(50|100)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/RedWines50-100.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/RedWines50-100.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 vins rouges fr entre 10 et 50€
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+124)+price(10|50)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/RedWines10-50.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/RedWines10-50.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 vins blancs fr au dela de 100 € 
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+125)+price(100)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/WhiteWines100.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/WhiteWines100.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 vins blancs fr entre 50 et 100€
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+125)+price(50|100)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/WhiteWines50-100.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/WhiteWines50-100.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 vins blancs fr entre 10 et 50€
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+125)+price(10|50)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/WhiteWines10-50.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/WhiteWines10-50.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 champagnes fr au dela de 100 € 
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+123)+price(100)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/ChampagneWines100.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/ChampagneWines100.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 champagnes fr entre 50 et 100€ 
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+123)+price(50|100)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/ChampagneWines50-100.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/ChampagneWines50-100.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}
+        	//100 vins rosés fr
+        	url = new URL(apiBaseUrl+"/catalog?filter=categories(490+126)&size=100&search=France&apikey="+apikey);
+        	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Wines/RoseWines10-50.xml"))==false){
+        		File file = new File(getResourcePath() + "FilesXML/Wines/RoseWines10-50.xml");
+    			FileUtils.copyURLToFile(url, file);
+        	}        	            
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
         
-
         BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springData.xml");
         IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);
-
+        IDaoSupplier daoSupplier = (IDaoSupplier) bf.getBean(IDaoSupplier.class);
+        IDaoAdmin daoAdmin = bf.getBean(IDaoAdmin.class);
+        IDaoAdress daoAdress = bf.getBean(IDaoAdress.class);
+        IDaoSpecialEvent daoEvent = bf.getBean(IDaoSpecialEvent.class);
+        Admin admin=null;
+		try {
+			admin = new Admin(null, "strateur", "admini", new Date(), "nicolastorero@gmail.com", "nicolastorero@gmail.com", "test1234", "0680413240", new Date(), new Date(), Civility.MR,daoAdress.findObj(1));
+			daoAdmin.insertObj(admin);
+		} catch (WineException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
         Product productRand = new Product(null, "pre", 500.0, "un produit");
 
-        Product productAccessorie = new ProductAccessories(null, "un mug",
-                25.0, "un beau mug", new Date());
-
-        Supplier supplier1 = new Supplier(null, "Aux bon vins de Bourgogne",
-                "05 85 74 85 69",
-                "vinsbourgogne@gmail.com", new Date());
-        Supplier supplier2 = new Supplier(null, "Aux bon vins de Bordeaux",
-                "04 85 74 85 69",
-                "vinsbordeaux@gmail.com", new Date());
-        Supplier supplier3 = new Supplier(null, "Aux bon vins de l'Aude",
-                "07 85 74 85 69",
-                "vinsaude@gmail.com", new Date());
+        Product productAccessorie = new ProductAccessories(null, "un mug",25.0, "un beau mug", new Date());
+        Supplier supplier1 = new Supplier(null, "Aux bon vins de Bourgogne","05 85 74 85 69","vinsbourgogne@gmail.com", new Date());
+        Supplier supplier2 = new Supplier(null, "Aux bon vins de Bordeaux","04 85 74 85 69","vinsbordeaux@gmail.com", new Date());
+        Supplier supplier3 = new Supplier(null, "Aux bon vins de l'Aude","07 85 74 85 69","vinsaude@gmail.com", new Date());
         try {
 	        //Les Set sont particulièrement adaptés pour manipuler une grande
 	        //quantité de données. Cependant, les performances de ceux-ci peuvent
 	        //être amoindries en insertion. Généralement, on opte pour un HashSet,
 	        //car il est plus performant en temps d'accès 
-	        Set<Supplier> suppliersRand = new HashSet<Supplier>();
-	        suppliersRand.add(supplier1);
-	        suppliersRand.add(supplier2);
-	        productRand.setStockSuppliers(suppliersRand);
+	        ProductSupplier productSuppliers1 = new ProductSupplier();
+	        ProductSupplier productSuppliers2 = new ProductSupplier();
+	        productSuppliers1.setProduct(productRand);
+	        productSuppliers1.setSupplier(daoSupplier.insertObj(supplier1));
+	        productSuppliers1.setQuantity(30);
+	        productSuppliers2.setProduct(productRand);
+	        productSuppliers2.setSupplier(daoSupplier.insertObj(supplier2));
+	        productSuppliers2.setQuantity(15);
+	        productRand.getProductSuppliers().add(productSuppliers1);
+	        productRand.getProductSuppliers().add(productSuppliers2);
 	        daoVin.insertObj(productRand);
-	        Set<Supplier> suppliersAccessorie= new HashSet<Supplier>();
-	        suppliersAccessorie.add(supplier1);
-	        productAccessorie.setStockSuppliers(suppliersAccessorie);
+	        
+	        ProductSupplier productSuppliers3 = new ProductSupplier();
+	        productSuppliers3.setProduct(productAccessorie);
+	        productSuppliers3.setSupplier(daoSupplier.insertObj(supplier3));
+	        productSuppliers3.setQuantity(20);
+	        productAccessorie.getProductSuppliers().add(productSuppliers3);
 	        daoVin.insertObj(productAccessorie);
 	        
-	        for(int i=1;i<7;i++){
-	        	list = parseSampleXml("FilesXML/wines"+i+".xml");
-		        Integer cpt = 0;
-		        for (ProductWine productWine: list) {
-		        	Set<Supplier> supplierWine = new HashSet<>();
-		        	supplierWine.add(supplier1);
-		        	if(cpt%2==0) {
-		        		supplierWine.add(supplier2);
-		        	}else if(cpt%3==0) {
-		        		supplierWine.add(supplier3);
-		        	}
-		        	productWine.setStockSuppliers(supplierWine);
-		        	daoVin.insertObj(productWine);
-		        	cpt++;
-				}
-	        }
+	        SpecialEvent se = new SpecialEvent(null,"Promotest",new Date(),new Date(),new Date(),"10% sur une sélection de produits",true,admin,10);
+	        daoEvent.insertObj(se);
+	        
+	        for (Path filepath : Files.newDirectoryStream(Paths.get(getResourcePath()+"FilesXML/Wines/"))) {
+	        	if(filepath.getFileName().toString().contains("xml")){
+		        	list = parseSampleXml("FilesXML/Wines/"+filepath.getFileName());
+		        	
+		        	Integer cpt = 0;
+			        for (ProductWine productWine: list) {
+			        	ProductSupplier ps = new ProductSupplier();
+			        	ps.setProduct(productWine);
+				        ps.setSupplier(supplier1);
+				        ps.setQuantity(randomWithRange(1,50));
+				        productWine.getProductSuppliers().add(ps);
+			        	if(cpt%2==0) {
+			        		ProductSupplier ps2 = new ProductSupplier();
+			        		ps2.setProduct(productWine);
+			        		ps2.setSupplier(supplier2);
+			        		ps2.setQuantity(randomWithRange(1,50));
+					        productWine.getProductSuppliers().add(ps2);
+			        	}else if(cpt%3==0) {
+			        		ProductSupplier ps3 = new ProductSupplier();
+			        		ps3.setProduct(productWine);
+			        		ps3.setSupplier(supplier3);
+			        		ps3.setQuantity(randomWithRange(1,50));
+					        productWine.getProductSuppliers().add(ps3);
+			        	}
+			        	if(cpt<11) {
+			        		productWine.setSpeEvent(se);
+			        	}
+			        	daoVin.insertObj(productWine);
+			        	cpt++;
+					}
+	        	}
+			}
         } catch (WineException ex) {
             java.util.logging.Logger.getLogger(XmlParser.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+        } catch (IOException e) {
+        	java.util.logging.Logger.getLogger(XmlParser.class.getName()).log(Level.SEVERE, null, e);
+		}
+        /*BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springData.xml");
+        IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);
+		try {
+			BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springData.xml");
+	        IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);
+	        List<Product> list = daoVin.findAllObj();
+	        for (Product product : list) {
+	        	String imagesUrl = ((ProductWine)product).getImagesUrl();
+	        	String xmlId = ((ProductWine)product).getApiId().toString();
+	        	String [] urls = imagesUrl.split("\\|");
+	        	for (int i = 0; i < urls.length; i++) {
+					if(urls[i].trim()!=""){
+						URL url = new URL(urls[i].trim());
+						String filename = FilenameUtils.getBaseName(url.toString())+"."+FilenameUtils.getExtension(url.toString());
+						if(Files.exists(Paths.get(getResourcePath() + "wine_pictures/"+xmlId+"/"+filename))==false){
+				    		File file = new File(getResourcePath() + "wine_pictures/"+xmlId+"/"+filename);
+				    		try {
+								FileUtils.copyURLToFile(url, file);
+							} catch (FileNotFoundException e) {
+								
+							}
+				    	}
+						if(filename==xmlId+"m.jpg"){
+							if(Files.exists(Paths.get(getResourcePath() + "wine_pictures/"+xmlId+"/"+xmlId+"l.jpg"))==false){
+					    		File file = new File(getResourcePath() + "wine_pictures/"+xmlId+"/"+xmlId+"l.jpg");
+					    		URL url2 = new URL(urls[i].trim().replace("m.jpg", "l.jpg"));
+					    		try {
+									FileUtils.copyURLToFile(url2, file);
+								} catch (FileNotFoundException e) {
+									
+								}
+					    	}
+						}
+					}
+				}
+		    	
+	        	if(xmlId.length()==6){
+					URL url = new URL("http://cdn.fluidretail.net/customers/c1477/"+xmlId.substring(0, 2)+"/"+xmlId.substring(2,4)+"/"+xmlId.substring(4)+"/_s/pi/n/"+xmlId+"_spin_spin2/main_variation_na_view_01_204x400.jpg");
+			    	if(Files.exists(Paths.get(getResourcePath() + "wine_pictures/"+xmlId+"/"+xmlId+"_front.jpg"))==false){
+			    		File file = new File(getResourcePath() + "wine_pictures/"+xmlId+"/"+xmlId+"_front.jpg");
+			    		try {
+							FileUtils.copyURLToFile(url, file);
+						} catch (FileNotFoundException e) {
+							
+						}
+			    	}
+			    	URL url2 = new URL("http://cdn.fluidretail.net/customers/c1477/"+xmlId.substring(0, 2)+"/"+xmlId.substring(2,4)+"/"+xmlId.substring(4)+"/_s/pi/n/"+xmlId+"_spin_spin2/main_variation_na_view_07_204x400.jpg");
+			    	if(Files.exists(Paths.get(getResourcePath() + "wine_pictures/"+xmlId+"/"+xmlId+"_back.jpg"))==false){
+			    		File file = new File(getResourcePath() + "wine_pictures/"+xmlId+"/"+xmlId+"_back.jpg");
+			    		try {
+			    			FileUtils.copyURLToFile(url2, file);
+			    		} catch (FileNotFoundException e) {
+							
+						}
+			    	}
+				}
+	        }
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (WineException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+        //http://cdn.fluidretail.net/customers/c1477/13/68/80/_s/pi/n/136880_spin_spin2/main_variation_na_view_01_204x400.jpg*/
         log.info("\t ### Fin du test ###");
+    }
+    
+    private static int randomWithRange(int min, int max)
+    {
+	   int range = (max - min) + 1;     
+	   return (int)(Math.random() * range) + min;
+    }
+    
+    private static String getResourcePath() {
+        try {
+            URI resourcePathFile = System.class.getResource("/RESOURCE_PATH").toURI();
+            String resourcePath = Files.readAllLines(Paths.get(resourcePathFile)).get(0);
+            URI rootURI = new File("").toURI();
+            URI resourceURI = new File(resourcePath).toURI();
+            URI relativeResourceURI = rootURI.relativize(resourceURI);
+            return relativeResourceURI.getPath();
+        } catch (Exception e) {
+            return null;
+        }
     }
     
     public static java.util.List<ProductWine> parseSampleXml(String fileName) throws WineException
@@ -139,7 +332,10 @@ public class XmlParser {
 		for(int i = 0; i<subNodes.getLength();i++){
 			Node node = subNodes.item(i);
 			Element tag = (Element)node;
-			wineList.add(setWine(tag));
+			ProductWine w = setWine(tag);
+			if(Files.exists(Paths.get(getResourcePath() + "wine_pictures/"+w.getApiId()+"/"+w.getApiId()+"_front.jpg"))==true) {
+				wineList.add(w);
+			}
 		}
 		return wineList;
     }
@@ -147,24 +343,26 @@ public class XmlParser {
     private static ProductWine setWine(Node itemNode) {
     	ProductWine p = new ProductWine();
 		NodeList wineInfos = itemNode.getChildNodes();
-		p.setName(extractNameFromSubNodeList(wineInfos));
-		for(int i = 0; i<wineInfos.getLength();i++){
+		p.setName(extractFieldFromSubNodeList(wineInfos,"Name"));
+		List<String> picsUrl = new ArrayList<String>();
+ 		for(int i = 0; i<wineInfos.getLength();i++){
 			if(wineInfos.item(i).getNodeName().equals("Id")){
 				p.setApiId(Integer.parseInt(wineInfos.item(i).getTextContent()));
 			}
 			if(wineInfos.item(i).getNodeName().equals("Vintage")){
-				try{
-					p.setVintage(Integer.parseInt(wineInfos.item(i).getTextContent()));
-				}catch(NumberFormatException e) {
-					p.setVintage(null);
-				}
+				p.setProductVintage(getWineVintage(wineInfos.item(i)));
 			}
 			if(wineInfos.item(i).getNodeName().equals("PriceRetail")){
 				p.setPrice(Double.valueOf(wineInfos.item(i).getTextContent()));
 			}
 			if(wineInfos.item(i).getNodeName().equals("Appellation")){
-				p.setAppellation(extractNameFromSubNodeList(wineInfos.item(i).getChildNodes()));	
-				p.setRegion(getWineRegion(wineInfos.item(i)));
+				p.setAppellation(extractFieldFromSubNodeList(wineInfos.item(i).getChildNodes(),"Name"));	
+			}
+			if(wineInfos.item(i).getNodeName().equals("Labels")){
+				getLabelsUrl(wineInfos.item(i),picsUrl);	
+			}
+			if(wineInfos.item(i).getNodeName().equals("Vineyard")){
+				getVineyardPicUrl(wineInfos.item(i),picsUrl);	
 			}
 			if(wineInfos.item(i).getNodeName().equals("Varietal")){
 				
@@ -176,11 +374,40 @@ public class XmlParser {
 				p.setDescription(getWineDescription(wineInfos.item(i)));
 			}
 		}
+ 		p.setImagesUrl(StringUtils.join(picsUrl.iterator(),"|"));
     	return p;
     }
     
+    private static ProductVintage getWineVintage(Node VintageNode){
+    	String vintage = VintageNode.getTextContent();
+    	ProductVintage oVintage=null;
+    	try{
+    		if(vintage!=null) {
+    			if(vintages.containsKey(vintage)==false) {
+    				oVintage = new ProductVintage(null,Integer.parseInt(vintage));
+    				vintages.put(vintage, oVintage);
+    			} else {
+    				oVintage = (ProductVintage)vintages.get(vintage);
+    			}
+    		}
+		}catch(NumberFormatException e) {
+			//
+		}
+    	return oVintage;
+    }
+    
+    private static void getVineyardPicUrl(Node vineyardNode,List<String> list){
+    	list.add(extractFieldFromSubNodeList(vineyardNode.getChildNodes(),"ImageUrl"));
+    }
+    
+    private static void getLabelsUrl(Node labelsNode,List<String> list){
+    	for(int j = 0; j<labelsNode.getChildNodes().getLength();j++){
+    		list.add(extractFieldFromSubNodeList(labelsNode.getChildNodes().item(j).getChildNodes(),"Url"));
+    	}
+    }
+    
     private static ProductVarietal getWineVarietal(Node varietalNode){
-    	String varietal = extractNameFromSubNodeList(varietalNode.getChildNodes());
+    	String varietal = extractFieldFromSubNodeList(varietalNode.getChildNodes(),"Name");
 		ProductVarietal oVarietal=null;
 		if(varietals.containsKey(varietal)==false) {
 			oVarietal = new ProductVarietal(null,varietal);
@@ -190,28 +417,12 @@ public class XmlParser {
 		}
     	return oVarietal;
     }
-    
-    private static Region getWineRegion(Node appellationNode){
-    	Region oRegion = new Region();
-    	for(int j = 0; j<appellationNode.getChildNodes().getLength();j++){
-			if(appellationNode.getChildNodes().item(j).getNodeName().equals("Region")){
-				String region = extractNameFromSubNodeList(appellationNode.getChildNodes().item(j).getChildNodes());
-				if(regions.containsKey(region)==false) {
-					oRegion = new Region(null,region,null);
-					regions.put(region, oRegion);
-				} else {
-					oRegion = (Region)regions.get(region);
-				}
-			}
-    	}
-    	return oRegion;
-    }
-    
+        
     private static ProductType getWineType(Node varietal){
     	ProductType oType=null;
     	for(int j = 0; j<varietal.getChildNodes().getLength();j++){
 			if(varietal.getChildNodes().item(j).getNodeName().equals("WineType")){
-				String type = extractNameFromSubNodeList(varietal.getChildNodes().item(j).getChildNodes());
+				String type = extractFieldFromSubNodeList(varietal.getChildNodes().item(j).getChildNodes(),"Name");
 				if(types.containsKey(type)==false) {
 					oType = new ProductType(null,type);
 					types.put(type, oType);
@@ -230,18 +441,18 @@ public class XmlParser {
 				if(j>0){
 					description=description+"|";
 				}
-				description=description+extractNameFromSubNodeList(attributes.getChildNodes().item(j).getChildNodes());
+				description=description+extractFieldFromSubNodeList(attributes.getChildNodes().item(j).getChildNodes(),"Name");
 			}
 		}
 		return description;
 		
     }
     
-    private static String extractNameFromSubNodeList(NodeList subNodes)
+    private static String extractFieldFromSubNodeList(NodeList subNodes,String fieldName)
     {
     	String name = null;
     	for(int i = 0; i<subNodes.getLength();i++){
-    		if(subNodes.item(i).getNodeName().equals("Name")){
+    		if(subNodes.item(i).getNodeName().equals(fieldName)){
     			name = subNodes.item(i).getTextContent();
     		}
     	}

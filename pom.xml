@@ -4,7 +4,7 @@
     <groupId>fr.afcepf.atod</groupId>
     <artifactId>Wine-Parser</artifactId>
     <version>1.0</version>
-     <packaging>jar</packaging>
+    <packaging>jar</packaging>
     <properties>
         <java.version>1.8</java.version>
         <maven.plugin.compiler>3.5.1</maven.plugin.compiler>
@@ -12,23 +12,19 @@
         <wine-entity.version>1.0</wine-entity.version>
         <wine-exception.version>1.0</wine-exception.version>
         <wine-data-product.version>1.0</wine-data-product.version>
+        <wine-data-admin.version>1.0</wine-data-admin.version>
+        <RESOURCE_PATH>${project.basedir}/src/main/resources</RESOURCE_PATH>
     </properties>
-    
     <dependencies>
-        <dependency>
-            <groupId>fr.afcepf.atod</groupId>
-            <artifactId>Wine-Entity</artifactId>
-            <version>${wine-entity.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>fr.afcepf.atod</groupId>
-            <artifactId>Wine-Exception</artifactId>
-            <version>${wine-exception.version}</version>
-        </dependency>
         <dependency>
             <groupId>fr.afcepf.atod</groupId>
             <artifactId>Wine-Data-Product</artifactId>
             <version>${wine-data-product.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.afcepf.atod</groupId>
+            <artifactId>Wine-Data-Admin</artifactId>
+            <version>${wine-data-admin.version}</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
@@ -40,8 +36,20 @@
 		    <artifactId>commons-io</artifactId>
 		    <version>2.5</version>
 		</dependency>
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>3.4</version>
+		</dependency>
     </dependencies>
     <build>
+    	<resources>
+            <resource>
+                <directory>${RESOURCE_PATH}</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+>>>>>>> branch 'master' of https://github.com/n1kk018/Wine-Parser
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
