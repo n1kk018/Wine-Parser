@@ -66,7 +66,7 @@ public class XmlParser {
 
     public static void main(String[] args) {
         log.info("\t ### debut du test ###");
-        URL url;
+        /*URL url;
 		try {
 			url = new URL(apiBaseUrl+"/categorymap?filter=categories(490)&apikey="+apikey); 
         	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/ategoryMap.xml"))==false){
@@ -130,7 +130,7 @@ public class XmlParser {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
         
         BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springData.xml");
         IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);
@@ -213,8 +213,8 @@ public class XmlParser {
 					if(urls[i].trim()!=""){
 						URL url = new URL(urls[i].trim());
 						String filename = FilenameUtils.getBaseName(url.toString())+"."+FilenameUtils.getExtension(url.toString());
-						if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+filename))==false){
-				    		File file = new File(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+filename);
+						if(Files.exists(Paths.get(getResourcePath() + "wine_pictures/"+xmlId+"/"+filename))==false){
+				    		File file = new File(getResourcePath() + "wine_pictures/"+xmlId+"/"+filename);
 				    		try {
 								FileUtils.copyURLToFile(url, file);
 							} catch (FileNotFoundException e) {
@@ -222,8 +222,8 @@ public class XmlParser {
 							}
 				    	}
 						if(filename==xmlId+"m.jpg"){
-							if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+xmlId+"l.jpg"))==false){
-					    		File file = new File(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+xmlId+"l.jpg");
+							if(Files.exists(Paths.get(getResourcePath() + "wine_pictures/"+xmlId+"/"+xmlId+"l.jpg"))==false){
+					    		File file = new File(getResourcePath() + "wine_pictures/"+xmlId+"/"+xmlId+"l.jpg");
 					    		URL url2 = new URL(urls[i].trim().replace("m.jpg", "l.jpg"));
 					    		try {
 									FileUtils.copyURLToFile(url2, file);
@@ -237,8 +237,8 @@ public class XmlParser {
 		    	
 	        	if(xmlId.length()==6){
 					URL url = new URL("http://cdn.fluidretail.net/customers/c1477/"+xmlId.substring(0, 2)+"/"+xmlId.substring(2,4)+"/"+xmlId.substring(4)+"/_s/pi/n/"+xmlId+"_spin_spin2/main_variation_na_view_01_204x400.jpg");
-			    	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+xmlId+"_front.jpg"))==false){
-			    		File file = new File(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+xmlId+"_front.jpg");
+			    	if(Files.exists(Paths.get(getResourcePath() + "wine_pictures/"+xmlId+"/"+xmlId+"_front.jpg"))==false){
+			    		File file = new File(getResourcePath() + "wine_pictures/"+xmlId+"/"+xmlId+"_front.jpg");
 			    		try {
 							FileUtils.copyURLToFile(url, file);
 						} catch (FileNotFoundException e) {
@@ -246,8 +246,8 @@ public class XmlParser {
 						}
 			    	}
 			    	URL url2 = new URL("http://cdn.fluidretail.net/customers/c1477/"+xmlId.substring(0, 2)+"/"+xmlId.substring(2,4)+"/"+xmlId.substring(4)+"/_s/pi/n/"+xmlId+"_spin_spin2/main_variation_na_view_07_204x400.jpg");
-			    	if(Files.exists(Paths.get(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+xmlId+"_back.jpg"))==false){
-			    		File file = new File(getResourcePath() + "FilesXML/Images/"+xmlId+"/"+xmlId+"_back.jpg");
+			    	if(Files.exists(Paths.get(getResourcePath() + "wine_pictures/"+xmlId+"/"+xmlId+"_back.jpg"))==false){
+			    		File file = new File(getResourcePath() + "wine_pictures/"+xmlId+"/"+xmlId+"_back.jpg");
 			    		try {
 			    			FileUtils.copyURLToFile(url2, file);
 			    		} catch (FileNotFoundException e) {
@@ -307,7 +307,10 @@ public class XmlParser {
 		for(int i = 0; i<subNodes.getLength();i++){
 			Node node = subNodes.item(i);
 			Element tag = (Element)node;
-			wineList.add(setWine(tag));
+			ProductWine w = setWine(tag);
+			if(Files.exists(Paths.get(getResourcePath() + "wine_pictures/"+w.getApiId()+"/"+w.getApiId()+"_front.jpg"))==true) {
+				wineList.add(w);
+			}
 		}
 		return wineList;
     }

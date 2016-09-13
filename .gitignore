@@ -79,3 +79,10 @@ Servers/
 # PDT-specific
 .buildpath
 Images/
+
+######################
+# Specific
+######################
+/src/main/resources/wine_pictures/*/*.jpg
+/src/main/resources/wine_pictures/*/*.jpeg
+/src/main/resources/wine_pictures/*/.gitignore

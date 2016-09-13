@@ -4,7 +4,7 @@
     <groupId>fr.afcepf.atod</groupId>
     <artifactId>Wine-Parser</artifactId>
     <version>1.0</version>
-     <packaging>jar</packaging>
+    <packaging>jar</packaging>
     <properties>
         <java.version>1.8</java.version>
         <maven.plugin.compiler>3.5.1</maven.plugin.compiler>
