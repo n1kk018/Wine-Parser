@@ -49,7 +49,6 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
->>>>>>> branch 'master' of https://github.com/n1kk018/Wine-Parser
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

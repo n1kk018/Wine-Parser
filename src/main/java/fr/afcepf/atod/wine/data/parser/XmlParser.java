@@ -187,11 +187,10 @@ public class XmlParser {
 	        SpecialEvent se = new SpecialEvent(null,"Promotest",new Date(),new Date(),new Date(),"10% sur une sélection de produits",true,admin,10);
 	        daoEvent.insertObj(se);
 	        
+	        Integer cpt = 0;
 	        for (Path filepath : Files.newDirectoryStream(Paths.get(getResourcePath()+"FilesXML/Wines/"))) {
 	        	if(filepath.getFileName().toString().contains("xml")){
 		        	list = parseSampleXml("FilesXML/Wines/"+filepath.getFileName());
-		        	
-		        	Integer cpt = 0;
 			        for (ProductWine productWine: list) {
 			        	ProductSupplier ps = new ProductSupplier();
 			        	ps.setProduct(productWine);
