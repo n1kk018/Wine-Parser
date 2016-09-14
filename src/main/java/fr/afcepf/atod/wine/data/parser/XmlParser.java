@@ -2,13 +2,18 @@ package fr.afcepf.atod.wine.data.parser;
 
 import fr.afcepf.atod.vin.data.exception.WineException;
 import fr.afcepf.atod.wine.data.admin.api.IDaoAdmin;
-import fr.afcepf.atod.wine.data.admin.api.IDaoAdress;
 import fr.afcepf.atod.wine.data.admin.api.IDaoSpecialEvent;
+import fr.afcepf.atod.wine.data.product.api.IDaoAdress;
+import fr.afcepf.atod.wine.data.product.api.IDaoCity;
+import fr.afcepf.atod.wine.data.product.api.IDaoCountry;
 import fr.afcepf.atod.wine.data.product.api.IDaoProduct;
+import fr.afcepf.atod.wine.data.product.api.IDaoRegion;
 import fr.afcepf.atod.wine.data.product.api.IDaoSupplier;
 import fr.afcepf.atod.wine.entity.Admin;
 import fr.afcepf.atod.wine.entity.Adress;
+import fr.afcepf.atod.wine.entity.City;
 import fr.afcepf.atod.wine.entity.Civility;
+import fr.afcepf.atod.wine.entity.Country;
 import fr.afcepf.atod.wine.entity.Product;
 import fr.afcepf.atod.wine.entity.ProductAccessories;
 import fr.afcepf.atod.wine.entity.ProductSupplier;
@@ -16,6 +21,7 @@ import fr.afcepf.atod.wine.entity.ProductType;
 import fr.afcepf.atod.wine.entity.ProductVarietal;
 import fr.afcepf.atod.wine.entity.ProductVintage;
 import fr.afcepf.atod.wine.entity.ProductWine;
+import fr.afcepf.atod.wine.entity.Region;
 import fr.afcepf.atod.wine.entity.SpecialEvent;
 import fr.afcepf.atod.wine.entity.Supplier;
 
@@ -144,11 +150,25 @@ public class XmlParser {
         IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);
         IDaoSupplier daoSupplier = (IDaoSupplier) bf.getBean(IDaoSupplier.class);
         IDaoAdmin daoAdmin = bf.getBean(IDaoAdmin.class);
-        IDaoAdress daoAdress = bf.getBean(IDaoAdress.class);
         IDaoSpecialEvent daoEvent = bf.getBean(IDaoSpecialEvent.class);
+        IDaoCountry daoCountry = bf.getBean(IDaoCountry.class);
+        IDaoRegion daoRegion = bf.getBean(IDaoRegion.class);
+        IDaoCity daoCity = bf.getBean(IDaoCity.class);
+        IDaoAdress daoAdr= bf.getBean(IDaoAdress.class);
+        
+        try {
+			daoAdr.insertObj(new Adress(null, "rue du test", "18", false, 
+					daoCity.insertObj(new City(null, "75001", "Paris", 
+							daoRegion.insertObj(new Region(null,"Idf",
+									daoCountry.insertObj(new Country(null,"France"))))))));
+		} catch (WineException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
+        
         Admin admin=null;
 		try {
-			admin = new Admin(null, "strateur", "admini", new Date(), "nicolastorero@gmail.com", "nicolastorero@gmail.com", "test1234", "0680413240", new Date(), new Date(), Civility.MR,daoAdress.findObj(1));
+			admin = new Admin(null, "strateur", "admini", new Date(), "nicolastorero@gmail.com", "nicolastorero@gmail.com", "test1234", "0680413240", new Date(), new Date(), Civility.MR,daoAdr.findObj(1));
 			daoAdmin.insertObj(admin);
 		} catch (WineException e1) {
 			// TODO Auto-generated catch block
