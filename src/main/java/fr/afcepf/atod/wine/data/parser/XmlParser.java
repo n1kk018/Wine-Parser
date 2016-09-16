@@ -364,7 +364,7 @@ public class XmlParser {
     	ProductWine p = new ProductWine();
 		NodeList wineInfos = itemNode.getChildNodes();
 		p.setName(extractFieldFromSubNodeList(wineInfos,"Name"));
-		List<String> picsUrl = new ArrayList<String>();
+		List<String> pics = new ArrayList<String>();
  		for(int i = 0; i<wineInfos.getLength();i++){
 			if(wineInfos.item(i).getNodeName().equals("Id")){
 				p.setApiId(Integer.parseInt(wineInfos.item(i).getTextContent()));
@@ -379,10 +379,10 @@ public class XmlParser {
 				p.setAppellation(extractFieldFromSubNodeList(wineInfos.item(i).getChildNodes(),"Name"));	
 			}
 			if(wineInfos.item(i).getNodeName().equals("Labels")){
-				getLabelsUrl(wineInfos.item(i),picsUrl);	
+				getLabelsImg(wineInfos.item(i),pics);	
 			}
 			if(wineInfos.item(i).getNodeName().equals("Vineyard")){
-				getVineyardPicUrl(wineInfos.item(i),picsUrl);	
+				getVineyardPicImg(wineInfos.item(i),pics);	
 			}
 			if(wineInfos.item(i).getNodeName().equals("Varietal")){
 				
@@ -394,7 +394,7 @@ public class XmlParser {
 				p.setDescription(getWineDescription(wineInfos.item(i)));
 			}
 		}
- 		p.setImagesUrl(StringUtils.join(picsUrl.iterator(),"|"));
+ 		p.setImages(StringUtils.join(pics.iterator(),"|"));
     	return p;
     }
     
@@ -416,13 +416,19 @@ public class XmlParser {
     	return oVintage;
     }
     
-    private static void getVineyardPicUrl(Node vineyardNode,List<String> list){
-    	list.add(extractFieldFromSubNodeList(vineyardNode.getChildNodes(),"ImageUrl"));
+    private static void getVineyardPicImg(Node vineyardNode,List<String> list){
+    	String url = extractFieldFromSubNodeList(vineyardNode.getChildNodes(),"ImageUrl");
+    	if(url.trim()!=""){
+    		list.add(FilenameUtils.getBaseName(url)+"."+FilenameUtils.getExtension(url));
+    	}
     }
     
-    private static void getLabelsUrl(Node labelsNode,List<String> list){
+    private static void getLabelsImg(Node labelsNode,List<String> list){
     	for(int j = 0; j<labelsNode.getChildNodes().getLength();j++){
-    		list.add(extractFieldFromSubNodeList(labelsNode.getChildNodes().item(j).getChildNodes(),"Url"));
+    		String url = extractFieldFromSubNodeList(labelsNode.getChildNodes().item(j).getChildNodes(),"Url");
+    		if(url.trim()!=""){
+    			list.add(FilenameUtils.getBaseName(url)+"."+FilenameUtils.getExtension(url));
+    		}
     	}
     }
     
