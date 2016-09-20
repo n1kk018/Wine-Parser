@@ -27,6 +27,16 @@
             <version>${wine-data-admin.version}</version>
         </dependency>
         <dependency>
+            <groupId>fr.afcepf.atod</groupId>
+            <artifactId>Wine-Data-Customer</artifactId>
+            <version>${wine-data-admin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.afcepf.atod</groupId>
+            <artifactId>Wine-Data-Order</artifactId>
+            <version>${wine-data-admin.version}</version>
+        </dependency>
+        <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>${log4j.version}</version>
