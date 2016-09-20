@@ -450,7 +450,17 @@ public class XmlParser {
 			if(varietal.getChildNodes().item(j).getNodeName().equals("WineType")){
 				String type = extractFieldFromSubNodeList(varietal.getChildNodes().item(j).getChildNodes(),"Name");
 				if(types.containsKey(type)==false) {
-					oType = new ProductType(null,type);
+					String typefr = "";
+					if(type.trim().contains("White Wines")){
+						typefr="Vins Blancs";
+					}else if (type.trim().contains("Red Wines")){
+						typefr="Vins Rouges";
+					}else if (type.trim().contains("Rosé Wine")){
+						typefr="Rosés";
+					}else{
+						typefr="Champagne";
+					}
+					oType = new ProductType(null,typefr);
 					types.put(type, oType);
 				} else {
 					oType = (ProductType)types.get(type);
