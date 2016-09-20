@@ -1,9 +1,13 @@
 package fr.afcepf.atod.wine.data.parser;
 
+import fr.afcepf.atod.customer.data.api.IDaoCustomer;
 import fr.afcepf.atod.vin.data.exception.WineException;
 import fr.afcepf.atod.wine.data.admin.api.IDaoAdmin;
 
 import fr.afcepf.atod.wine.data.admin.api.IDaoSpecialEvent;
+import fr.afcepf.atod.wine.data.order.api.IDaoPaymentInfo;
+import fr.afcepf.atod.wine.data.order.api.IDaoShippingMethode;
+import fr.afcepf.atod.wine.data.order.impl.DaoPayementInfo;
 import fr.afcepf.atod.wine.data.product.api.IDaoAdress;
 import fr.afcepf.atod.wine.data.product.api.IDaoCity;
 import fr.afcepf.atod.wine.data.product.api.IDaoCountry;
@@ -15,6 +19,8 @@ import fr.afcepf.atod.wine.entity.Adress;
 import fr.afcepf.atod.wine.entity.City;
 import fr.afcepf.atod.wine.entity.Civility;
 import fr.afcepf.atod.wine.entity.Country;
+import fr.afcepf.atod.wine.entity.Customer;
+import fr.afcepf.atod.wine.entity.PaymentInfo;
 import fr.afcepf.atod.wine.entity.Product;
 import fr.afcepf.atod.wine.entity.ProductAccessories;
 import fr.afcepf.atod.wine.entity.ProductSupplier;
@@ -23,6 +29,7 @@ import fr.afcepf.atod.wine.entity.ProductVarietal;
 import fr.afcepf.atod.wine.entity.ProductVintage;
 import fr.afcepf.atod.wine.entity.ProductWine;
 import fr.afcepf.atod.wine.entity.Region;
+import fr.afcepf.atod.wine.entity.ShippingMethod;
 import fr.afcepf.atod.wine.entity.SpecialEvent;
 import fr.afcepf.atod.wine.entity.Supplier;
 
@@ -156,9 +163,12 @@ public class XmlParser {
         IDaoRegion daoRegion = bf.getBean(IDaoRegion.class);
         IDaoCity daoCity = bf.getBean(IDaoCity.class);
         IDaoAdress daoAdr= bf.getBean(IDaoAdress.class);
+        IDaoCustomer daoCustomer =bf.getBean(IDaoCustomer.class);
+        IDaoShippingMethode daoShippingMethod = bf.getBean(IDaoShippingMethode.class);
+        IDaoPaymentInfo daoPayment = bf.getBean(IDaoPaymentInfo.class);
         
         try {
-			daoAdr.insertObj(new Adress(null, "rue du test", "18", false, 
+			daoAdr.insertObj(new Adress(null, "rue de rivoli", "18", false, 
 					daoCity.insertObj(new City(null, "75001", "Paris", 
 							daoRegion.insertObj(new Region(null,"Idf",
 									daoCountry.insertObj(new Country(null,"France"))))))));
@@ -168,9 +178,18 @@ public class XmlParser {
 		}
         
         Admin admin=null;
+        Customer customer1 = null;
+        Customer customer2 = null;
+        
 		try {
 			admin = new Admin(null, "strateur", "admini", new Date(), "nicolastorero@gmail.com", "nicolastorero@gmail.com", "test1234", "0680413240", new Date(), new Date(), Civility.MR,daoAdr.findObj(1));
+			customer1 = new Customer(null, "Wang", "Fen", new Date(), "fenwang@hotmail.com", "fenwang@hotmail.com", "test1234", "0666666666", new Date(), new Date(), Civility.MISS, daoAdr.findObj(1), true);
+			customer1 = new Customer(null, "Anes", "Zouheir", new Date(), "zouheir.anes@gmail.com", "zouheir.anes@gmail.com", "test1234", "0666666666", new Date(), new Date(), Civility.MR, daoAdr.findObj(1), true);
 			daoAdmin.insertObj(admin);
+			daoShippingMethod.insertObj(new ShippingMethod(null,"Colissimo"));
+			daoPayment.insertObj(new PaymentInfo(null,"Visa"));
+			daoCustomer.insertObj(customer1);
+			daoCustomer.insertObj(customer2);
 		} catch (WineException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
