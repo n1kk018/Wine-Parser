@@ -184,7 +184,7 @@ public class XmlParser {
 		try {
 			admin = new Admin(null, "strateur", "admini", new Date(), "nicolastorero@gmail.com", "nicolastorero@gmail.com", "test1234", "0680413240", new Date(), new Date(), Civility.MR,daoAdr.findObj(1));
 			customer1 = new Customer(null, "Wang", "Fen", new Date(), "fenwang@hotmail.com", "fenwang@hotmail.com", "test1234", "0666666666", new Date(), new Date(), Civility.MISS, daoAdr.findObj(1), true);
-			customer1 = new Customer(null, "Anes", "Zouheir", new Date(), "zouheir.anes@gmail.com", "zouheir.anes@gmail.com", "test1234", "0666666666", new Date(), new Date(), Civility.MR, daoAdr.findObj(1), true);
+			customer2 = new Customer(null, "Anes", "Zouheir", new Date(), "zouheir.anes@gmail.com", "zouheir.anes@gmail.com", "test1234", "0666666666", new Date(), new Date(), Civility.MR, daoAdr.findObj(1), true);
 			daoAdmin.insertObj(admin);
 			daoShippingMethod.insertObj(new ShippingMethod(null,"Colissimo"));
 			daoPayment.insertObj(new PaymentInfo(null,"Visa"));
