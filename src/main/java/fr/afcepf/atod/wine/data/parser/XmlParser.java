@@ -180,16 +180,19 @@ public class XmlParser {
         Admin admin=null;
         Customer customer1 = null;
         Customer customer2 = null;
+        Customer customer3 = null;
         
 		try {
 			admin = new Admin(null, "strateur", "admini", new Date(), "nicolastorero@gmail.com", "nicolastorero@gmail.com", "test1234", "0680413240", new Date(), new Date(), Civility.MR,daoAdr.findObj(1));
 			customer1 = new Customer(null, "Wang", "Fen", new Date(), "fenwang@hotmail.com", "fenwang@hotmail.com", "test1234", "0666666666", new Date(), new Date(), Civility.MISS, daoAdr.findObj(1), true);
 			customer2 = new Customer(null, "Anes", "Zouheir", new Date(), "zouheir.anes@gmail.com", "zouheir.anes@gmail.com", "test1234", "0666666666", new Date(), new Date(), Civility.MR, daoAdr.findObj(1), true);
+			customer3 = new Customer(null, "Storero", "Nicolas", new Date(), "nicolastorero@gmail.com", "nicolastorero@gmail.com", "test1234", "0666666666", new Date(), new Date(), Civility.MR, daoAdr.findObj(1), true);
 			daoAdmin.insertObj(admin);
 			daoShippingMethod.insertObj(new ShippingMethod(null,"Colissimo"));
 			daoPayment.insertObj(new PaymentInfo(null,"Visa"));
 			daoCustomer.insertObj(customer1);
 			daoCustomer.insertObj(customer2);
+			daoCustomer.insertObj(customer3);
 		} catch (WineException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
