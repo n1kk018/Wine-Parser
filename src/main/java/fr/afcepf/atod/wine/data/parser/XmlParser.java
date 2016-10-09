@@ -12,6 +12,7 @@ import fr.afcepf.atod.wine.data.product.api.IDaoAdress;
 import fr.afcepf.atod.wine.data.product.api.IDaoCity;
 import fr.afcepf.atod.wine.data.product.api.IDaoCountry;
 import fr.afcepf.atod.wine.data.product.api.IDaoProduct;
+import fr.afcepf.atod.wine.data.product.api.IDaoProductType;
 import fr.afcepf.atod.wine.data.product.api.IDaoRegion;
 import fr.afcepf.atod.wine.data.product.api.IDaoSupplier;
 import fr.afcepf.atod.wine.entity.Admin;
@@ -50,6 +51,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
@@ -153,7 +155,7 @@ public class XmlParser {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
-        
+        Locale.setDefault(Locale.US);
         BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springData.xml");
         IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);
         IDaoSupplier daoSupplier = (IDaoSupplier) bf.getBean(IDaoSupplier.class);
@@ -334,6 +336,7 @@ public class XmlParser {
 			e.printStackTrace();
 		} 
         //http://cdn.fluidretail.net/customers/c1477/13/68/80/_s/pi/n/136880_spin_spin2/main_variation_na_view_01_204x400.jpg*/
+        insert_translations(bf);
         log.info("\t ### Fin du test ###");
     }
     
@@ -472,17 +475,21 @@ public class XmlParser {
 			if(varietal.getChildNodes().item(j).getNodeName().equals("WineType")){
 				String type = extractFieldFromSubNodeList(varietal.getChildNodes().item(j).getChildNodes(),"Name");
 				if(types.containsKey(type)==false) {
-					String typefr = "";
-					if(type.trim().contains("White Wines")){
-						typefr="Vins Blancs";
-					}else if (type.trim().contains("Red Wines")){
-						typefr="Vins Rouges";
-					}else if (type.trim().contains("Rosé Wine")){
-						typefr="Rosés";
-					}else{
-						typefr="Champagne";
-					}
-					oType = new ProductType(null,typefr);
+				    if(Locale.getDefault()==Locale.FRANCE) {
+    					String typefr = "";
+    					if(type.trim().contains("White Wines")){
+    						typefr="Vins Blancs";
+    					}else if (type.trim().contains("Red Wines")){
+    						typefr="Vins Rouges";
+    					}else if (type.trim().contains("Rosé Wine")){
+    						typefr="Rosés";
+    					}else{
+    						typefr="Champagne";
+    					}
+    					oType = new ProductType(null,typefr);
+				    } else {
+				        oType = new ProductType(null,type);
+				    }
 					types.put(type, oType);
 				} else {
 					oType = (ProductType)types.get(type);
@@ -490,6 +497,34 @@ public class XmlParser {
 			}
 		}
     	return oType;
+    }
+    
+    public static void insert_translations(BeanFactory bf)
+    { 
+        IDaoProductType daoProductType = (IDaoProductType) bf.getBean(IDaoProductType.class);
+        //List<ProductWine> list = null;
+        try {
+            List<ProductType> types = daoProductType.findAllObj();
+            for (ProductType productType : types) {
+                    String typefr = "";
+                    if(productType.getType().contains("White Wines")){
+                        typefr="Vins Blancs";
+                    }else if (productType.getType().contains("Red Wines")){
+                        typefr="Vins Rouges";
+                    }else if (productType.getType().contains("Rosé Wine")){
+                        typefr="Rosés";
+                    }else{
+                        typefr="Champagne";
+                    }
+                    Locale.setDefault(Locale.FRANCE);
+                    productType.setType(typefr);
+                    daoProductType.updateObj(productType); 
+                    Locale.setDefault(Locale.US);
+            }
+        } catch (WineException paramE) {
+            // TODO Auto-generated catch block
+            paramE.printStackTrace();
+        }
     }
     
     private static String getWineDescription(Node attributes){
