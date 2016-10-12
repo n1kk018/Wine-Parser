@@ -590,7 +590,7 @@ public class XmlParser {
                featureSet.add(oFeature);
             }
         }
-        if(featureSet.isEmpty()==false) {
+        /*if(featureSet.isEmpty()==false) {
             p.setFeatures(featureSet);
             for (ProductFeature productFeature : featureSet) {
                 if(productFeature.getProducts()==null){
@@ -600,6 +600,9 @@ public class XmlParser {
                 wines.add((Product)p);
                 productFeature.setProducts(wines);
             }
+        }*/
+        if(featureSet.isEmpty()==false) {
+            p.setFeatures(featureSet);
         }
         return p;
     }
