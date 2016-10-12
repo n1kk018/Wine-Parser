@@ -11,11 +11,13 @@ import fr.afcepf.atod.wine.data.product.api.IDaoAdress;
 import fr.afcepf.atod.wine.data.product.api.IDaoCity;
 import fr.afcepf.atod.wine.data.product.api.IDaoCountry;
 import fr.afcepf.atod.wine.data.product.api.IDaoProduct;
+import fr.afcepf.atod.wine.data.product.api.IDaoProductFeature;
 import fr.afcepf.atod.wine.data.product.api.IDaoProductType;
 import fr.afcepf.atod.wine.data.product.api.IDaoProductVarietal;
 import fr.afcepf.atod.wine.data.product.api.IDaoProductWine;
 import fr.afcepf.atod.wine.data.product.api.IDaoRegion;
 import fr.afcepf.atod.wine.data.product.api.IDaoSupplier;
+import fr.afcepf.atod.wine.data.product.impl.DaoProductFeature;
 import fr.afcepf.atod.wine.entity.Admin;
 import fr.afcepf.atod.wine.entity.Adress;
 import fr.afcepf.atod.wine.entity.City;
@@ -79,7 +81,7 @@ public class XmlParser {
     private static Map<String,ProductVarietal> varietals = new HashMap<String,ProductVarietal>();
     private static Map<String,ProductType> types = new HashMap<String,ProductType>();
     private static Map<String,ProductVintage> vintages = new HashMap<String,ProductVintage>();
-    private static List<ProductWine> list = new ArrayList<ProductWine>();
+    private static List<ArrayList<ProductWine>> list = new ArrayList<ArrayList<ProductWine>>();
     private static Map<String, ProductFeature> features = new HashMap<String, ProductFeature>();
     private static String apiBaseUrl = "http://services.wine.com/api/beta2/service.svc/xml/";
     private static String apikey = "37662dd9dbf72936b590e8bdec649a30";
@@ -164,6 +166,7 @@ public class XmlParser {
         IDaoCustomer daoCustomer =bf.getBean(IDaoCustomer.class);
         IDaoShippingMethode daoShippingMethod = bf.getBean(IDaoShippingMethode.class);
         IDaoPaymentInfo daoPayment = bf.getBean(IDaoPaymentInfo.class);
+        IDaoProductFeature daoFeature = (IDaoProductFeature) bf.getBean(IDaoProductFeature.class);
         
         try {
 			daoAdr.insertObj(new Adress(null, "rue de rivoli", "18", false, 
@@ -196,7 +199,7 @@ public class XmlParser {
 			e1.printStackTrace();
 		}
         Product productRand = new Product(null, "pre", 500.0, "un produit");
-
+        SpecialEvent se = new SpecialEvent(null,"Promotest",new Date(),new Date(),new Date(),"10% sur une sélection de produits",true,admin,10);
         Product productAccessorie = new ProductAccessories(null, "un mug",25.0, "un beau mug", new Date());
         Supplier supplier1 = new Supplier(null, "Aux bon vins de Bourgogne","05 85 74 85 69","vinsbourgogne@gmail.com", new Date());
         Supplier supplier2 = new Supplier(null, "Aux bon vins de Bordeaux","04 85 74 85 69","vinsbordeaux@gmail.com", new Date());
@@ -217,46 +220,15 @@ public class XmlParser {
 	        productRand.getProductSuppliers().add(productSuppliers1);
 	        productRand.getProductSuppliers().add(productSuppliers2);
 	        daoVin.insertObj(productRand);
-	        
 	        ProductSupplier productSuppliers3 = new ProductSupplier();
 	        productSuppliers3.setProduct(productAccessorie);
 	        productSuppliers3.setSupplier(daoSupplier.insertObj(supplier3));
 	        productSuppliers3.setQuantity(20);
 	        productAccessorie.getProductSuppliers().add(productSuppliers3);
 	        daoVin.insertObj(productAccessorie);
-	        
-	        SpecialEvent se = new SpecialEvent(null,"Promotest",new Date(),new Date(),new Date(),"10% sur une sélection de produits",true,admin,10);
-	        daoEvent.insertObj(se);
-	        
-	        Integer cpt = 0;
 	        for (Path filepath : Files.newDirectoryStream(Paths.get(getResourcePath()+"FilesXML/Wines/"))) {
 	        	if(filepath.getFileName().toString().contains("xml")){
-		        	list = parseSampleXml("FilesXML/Wines/"+filepath.getFileName());
-			        for (ProductWine productWine: list) {
-			        	ProductSupplier ps = new ProductSupplier();
-			        	ps.setProduct(productWine);
-				        ps.setSupplier(supplier1);
-				        ps.setQuantity(randomWithRange(1,50));
-				        productWine.getProductSuppliers().add(ps);
-			        	if(cpt%2==0) {
-			        		ProductSupplier ps2 = new ProductSupplier();
-			        		ps2.setProduct(productWine);
-			        		ps2.setSupplier(supplier2);
-			        		ps2.setQuantity(randomWithRange(1,50));
-					        productWine.getProductSuppliers().add(ps2);
-			        	}else if(cpt%3==0) {
-			        		ProductSupplier ps3 = new ProductSupplier();
-			        		ps3.setProduct(productWine);
-			        		ps3.setSupplier(supplier3);
-			        		ps3.setQuantity(randomWithRange(1,50));
-					        productWine.getProductSuppliers().add(ps3);
-			        	}
-			        	if(cpt<11) {
-			        		productWine.setSpeEvent(se);
-			        	}
-			        	daoVin.insertObj(productWine);
-			        	cpt++;
-					}
+		        	list.add(parseSampleXml("FilesXML/Wines/"+filepath.getFileName()));
 	        	}
 			}
         } catch (WineException ex) {
@@ -264,6 +236,46 @@ public class XmlParser {
         } catch (IOException e) {
         	java.util.logging.Logger.getLogger(XmlParser.class.getName()).log(Level.SEVERE, null, e);
 		}
+        try {
+            daoEvent.insertObj(se);
+            if(features.isEmpty()==false) {
+                for (ProductFeature pf : features.values()) {
+                    daoFeature.insertObj(pf);
+                }
+            }
+            Integer cpt = 0;
+            for (ArrayList<ProductWine> subList : list) {
+                for (ProductWine productWine: subList) {
+                    ProductSupplier ps = new ProductSupplier();
+                    ps.setProduct(productWine);
+                    ps.setSupplier(supplier1);
+                    ps.setQuantity(randomWithRange(1,50));
+                    productWine.getProductSuppliers().add(ps);
+                    if(cpt%2==0) {
+                        ProductSupplier ps2 = new ProductSupplier();
+                        ps2.setProduct(productWine);
+                        ps2.setSupplier(supplier2);
+                        ps2.setQuantity(randomWithRange(1,50));
+                        productWine.getProductSuppliers().add(ps2);
+                    }else if(cpt%3==0) {
+                        ProductSupplier ps3 = new ProductSupplier();
+                        ps3.setProduct(productWine);
+                        ps3.setSupplier(supplier3);
+                        ps3.setQuantity(randomWithRange(1,50));
+                        productWine.getProductSuppliers().add(ps3);
+                    }
+                    if(cpt<11) {
+                        productWine.setSpeEvent(se);
+                    }
+                    daoVin.insertObj(productWine);
+                    cpt++;
+                }
+            }
+        } catch (WineException paramE) {
+            // TODO Auto-generated catch block
+            paramE.printStackTrace();
+        }
+        
         /*BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springData.xml");
         IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);
 		try {
@@ -355,9 +367,9 @@ public class XmlParser {
         }
     }
     
-    public static java.util.List<ProductWine> parseSampleXml(String fileName) throws WineException
+    public static ArrayList<ProductWine> parseSampleXml(String fileName) throws WineException
     {
-    	java.util.List<ProductWine> wineList = new ArrayList<ProductWine>();
+    	ArrayList<ProductWine> wineList = new ArrayList<ProductWine>();
     	DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		 dbf.setNamespaceAware(true);
 		 Document xml=null;
@@ -487,6 +499,7 @@ public class XmlParser {
         translateProductTypes(bf);
         translateProductVarietals(bf);
         translateProductAppellation(bf);
+        translateProductFeatures(bf);
     }
     
     private static void translateProductTypes(BeanFactory bf) {
@@ -540,6 +553,51 @@ public class XmlParser {
         }
     }
     
+    private static void translateProductFeatures(BeanFactory bf) {
+        IDaoProductFeature daoProductFeature = (IDaoProductFeature) bf.getBean(IDaoProductFeature.class);
+        HashMap<String, String> featuresTrad = new HashMap<String,String>();
+        try {
+            List<ProductFeature> features = daoProductFeature.findAllObj();
+            featuresTrad.put("Precious Wine","Vin rare");
+            featuresTrad.put("Has Large Label","Large étiquette");
+            featuresTrad.put("Bordeaux Futures","Bordeaux en primeurs");
+            featuresTrad.put("Wine Gift Sets","Coffrets cadeau de vin");
+            featuresTrad.put("Earthy &amp; Spicy","Vin terreux et épicé");
+            featuresTrad.put("Fruity &amp; Smooth","Vin fruité et rond");
+            featuresTrad.put("Birthday", "Pour anniversaire");
+            featuresTrad.put("Corporate Gifts", "Cadeaux d'entreprise");
+            featuresTrad.put("Sweet Wine", "Vin doux");
+            featuresTrad.put("Green Wines", "Vins verts");
+            featuresTrad.put("90+ Rated Wine", "Vin noté 90+");
+            featuresTrad.put("94+ Rated Wine", "Vin noté 94+");
+            featuresTrad.put("Light &amp; Fruity", "Vin léger et fruité");
+            featuresTrad.put("Congratulations", "Pour célébrations");
+            featuresTrad.put("Rich &amp; Creamy", "Vin riche et crémeux");
+            featuresTrad.put("Light &amp; Crisp", "Vin sec léger");
+            featuresTrad.put("Smooth &amp; Supple", "Vin rond et moelleux");
+            featuresTrad.put("Older Vintages","Millésimes plus anciens");
+            featuresTrad.put("94+ Rated Wine Under $75","Vin noté 94+ sous les 70€");
+            featuresTrad.put("Screw Cap Wines", "Vin avec bouchon vissé");
+            featuresTrad.put("90+ Rated Wine Under $20","Vin noté 90+ sous les 20€");
+            featuresTrad.put("Big &amp; Bold","Vin ample et audacieux");
+            featuresTrad.put("Has Video","Avec Vidéo");
+            featuresTrad.put("Wedding", "Idéal pour un mariage");
+            featuresTrad.put("Great Bottles to Give", "Une bouteille parfaite pour offrir");
+            featuresTrad.put("Boutique Wines", "Vin apprécié en boutique");
+            featuresTrad.put("Champagne Gifts", "Champagne parfait pour offrir");
+            featuresTrad.put("Collectible Wines", "Vins de collection");
+            Locale.setDefault(Locale.FRANCE);
+            for (ProductFeature pf : features) {
+                pf.setLabel(featuresTrad.get(pf.getLabel()));
+                daoProductFeature.updateObj(pf); 
+            }
+            Locale.setDefault(Locale.US);
+        } catch (WineException paramE) {
+            // TODO Auto-generated catch block
+            paramE.printStackTrace();
+        }
+    }
+    
     private static void translateProductVarietals(BeanFactory bf) {
         IDaoProductVarietal daoProductVarietal = (IDaoProductVarietal) bf.getBean(IDaoProductVarietal.class);
         try {
@@ -576,34 +634,15 @@ public class XmlParser {
     }
     
     private static ProductWine setWineFeatures(ProductWine p,Node attributes) {
-        Set<ProductFeature> featureSet = new HashSet<ProductFeature>();
         for(int j = 0; j<attributes.getChildNodes().getLength();j++){
             if(attributes.getChildNodes().item(j).getNodeName().equals("ProductAttribute")){
-               ProductFeature oFeature = null;
                String feature = extractFieldFromSubNodeList(attributes.getChildNodes().item(j).getChildNodes(),"Name");
                if(features.containsKey(feature)==false) {
-                   oFeature = new ProductFeature(null, feature);
-                   features.put(feature, oFeature);
-               } else {
-                   oFeature = (ProductFeature) features.get(feature);
+                   features.put(feature, new ProductFeature(null, feature));
                }
-               featureSet.add(oFeature);
+               p.getFeatures().add((ProductFeature) features.get(feature));
             }
-        }
-        /*if(featureSet.isEmpty()==false) {
-            p.setFeatures(featureSet);
-            for (ProductFeature productFeature : featureSet) {
-                if(productFeature.getProducts()==null){
-                    productFeature.setProducts(new HashSet<Product>());
-                }
-                Set<Product> wines = productFeature.getProducts();
-                wines.add((Product)p);
-                productFeature.setProducts(wines);
-            }
-        }*/
-        if(featureSet.isEmpty()==false) {
-            p.setFeatures(featureSet);
-        }
+        }          
         return p;
     }
     
