@@ -7,12 +7,13 @@ import fr.afcepf.atod.wine.data.admin.api.IDaoAdmin;
 import fr.afcepf.atod.wine.data.admin.api.IDaoSpecialEvent;
 import fr.afcepf.atod.wine.data.order.api.IDaoPaymentInfo;
 import fr.afcepf.atod.wine.data.order.api.IDaoShippingMethode;
-import fr.afcepf.atod.wine.data.order.impl.DaoPayementInfo;
 import fr.afcepf.atod.wine.data.product.api.IDaoAdress;
 import fr.afcepf.atod.wine.data.product.api.IDaoCity;
 import fr.afcepf.atod.wine.data.product.api.IDaoCountry;
 import fr.afcepf.atod.wine.data.product.api.IDaoProduct;
 import fr.afcepf.atod.wine.data.product.api.IDaoProductType;
+import fr.afcepf.atod.wine.data.product.api.IDaoProductVarietal;
+import fr.afcepf.atod.wine.data.product.api.IDaoProductWine;
 import fr.afcepf.atod.wine.data.product.api.IDaoRegion;
 import fr.afcepf.atod.wine.data.product.api.IDaoSupplier;
 import fr.afcepf.atod.wine.entity.Admin;
@@ -24,6 +25,7 @@ import fr.afcepf.atod.wine.entity.Customer;
 import fr.afcepf.atod.wine.entity.PaymentInfo;
 import fr.afcepf.atod.wine.entity.Product;
 import fr.afcepf.atod.wine.entity.ProductAccessories;
+import fr.afcepf.atod.wine.entity.ProductFeature;
 import fr.afcepf.atod.wine.entity.ProductSupplier;
 import fr.afcepf.atod.wine.entity.ProductType;
 import fr.afcepf.atod.wine.entity.ProductVarietal;
@@ -35,18 +37,12 @@ import fr.afcepf.atod.wine.entity.SpecialEvent;
 import fr.afcepf.atod.wine.entity.Supplier;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.net.URI;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.attribute.DosFileAttributeView;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -58,7 +54,6 @@ import java.util.logging.Level;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
@@ -84,7 +79,8 @@ public class XmlParser {
     private static Map<String,ProductVarietal> varietals = new HashMap<String,ProductVarietal>();
     private static Map<String,ProductType> types = new HashMap<String,ProductType>();
     private static Map<String,ProductVintage> vintages = new HashMap<String,ProductVintage>();
-    private static java.util.List<ProductWine> list = new ArrayList<ProductWine>();
+    private static List<ProductWine> list = new ArrayList<ProductWine>();
+    private static Map<String, ProductFeature> features = new HashMap<String, ProductFeature>();
     private static String apiBaseUrl = "http://services.wine.com/api/beta2/service.svc/xml/";
     private static String apikey = "37662dd9dbf72936b590e8bdec649a30";
 
@@ -417,6 +413,7 @@ public class XmlParser {
 			}
 			if(wineInfos.item(i).getNodeName().equals("ProductAttributes")){
 				p.setDescription(getWineDescription(wineInfos.item(i)));
+				p = setWineFeatures(p,wineInfos.item(i));
 			}
 		}
  		p.setImages(StringUtils.join(pics.iterator(),"|"));
@@ -475,21 +472,7 @@ public class XmlParser {
 			if(varietal.getChildNodes().item(j).getNodeName().equals("WineType")){
 				String type = extractFieldFromSubNodeList(varietal.getChildNodes().item(j).getChildNodes(),"Name");
 				if(types.containsKey(type)==false) {
-				    if(Locale.getDefault()==Locale.FRANCE) {
-    					String typefr = "";
-    					if(type.trim().contains("White Wines")){
-    						typefr="Vins Blancs";
-    					}else if (type.trim().contains("Red Wines")){
-    						typefr="Vins Rouges";
-    					}else if (type.trim().contains("Rosé Wine")){
-    						typefr="Rosés";
-    					}else{
-    						typefr="Champagne";
-    					}
-    					oType = new ProductType(null,typefr);
-				    } else {
-				        oType = new ProductType(null,type);
-				    }
+				    oType = new ProductType(null,type);
 					types.put(type, oType);
 				} else {
 					oType = (ProductType)types.get(type);
@@ -501,8 +484,13 @@ public class XmlParser {
     
     public static void insert_translations(BeanFactory bf)
     { 
+        translateProductTypes(bf);
+        translateProductVarietals(bf);
+        translateProductAppellation(bf);
+    }
+    
+    private static void translateProductTypes(BeanFactory bf) {
         IDaoProductType daoProductType = (IDaoProductType) bf.getBean(IDaoProductType.class);
-        //List<ProductWine> list = null;
         try {
             List<ProductType> types = daoProductType.findAllObj();
             for (ProductType productType : types) {
@@ -525,6 +513,95 @@ public class XmlParser {
             // TODO Auto-generated catch block
             paramE.printStackTrace();
         }
+    }
+    
+    private static void translateProductAppellation(BeanFactory bf) {
+        IDaoProductWine daoProduct = (IDaoProductWine) bf.getBean(IDaoProductWine.class);
+        try {
+            List<ProductWine> products = daoProduct.findAllObj();
+            for (ProductWine product : products) {
+                String appellationfr = "";
+                String appelation = product.getAppellation();
+                if(appelation.contains("Other")) {
+                    appellationfr = "Autre appelation française";
+                } else if(appelation.contains("Burgundy")) {
+                    appellationfr = "Bourgogne";
+                } else {
+                    appellationfr = appelation;
+                }
+                Locale.setDefault(Locale.FRANCE);
+                product.setAppellation(appellationfr);
+                daoProduct.updateObj(product) ;
+                Locale.setDefault(Locale.US);
+            }
+        } catch (WineException paramE) {
+            // TODO Auto-generated catch block
+            paramE.printStackTrace();
+        }
+    }
+    
+    private static void translateProductVarietals(BeanFactory bf) {
+        IDaoProductVarietal daoProductVarietal = (IDaoProductVarietal) bf.getBean(IDaoProductVarietal.class);
+        try {
+            List<ProductVarietal> varietals = daoProductVarietal.findAllObj();
+            for (ProductVarietal productVarietal : varietals) {
+                    String varietalfr = "";
+                    String desc = productVarietal.getDescription();
+                    if(productVarietal.getDescription().contains("Other")){
+                        if(desc.contains("Blends")) {
+                            varietalfr = "Autres assemblages de vins rouges";
+                        } else {
+                            if(desc.contains("Red")) {
+                                varietalfr = "Autres types de vins rouges";
+                            } else {
+                                varietalfr = "Autres types de vins blancs";
+                            }
+                        }
+                    } else if(desc.contains("Rhone")){
+                        varietalfr = "Assemblages de vins rouges du Rhône";
+                    } else if(desc.contains("Vintage")){
+                        varietalfr = desc.replace("Vintage", "Millesimé");
+                    }else {
+                        varietalfr = desc;
+                    }
+                    Locale.setDefault(Locale.FRANCE);
+                    productVarietal.setDescription(varietalfr);
+                    daoProductVarietal.updateObj(productVarietal); 
+                    Locale.setDefault(Locale.US);
+            }
+        } catch (WineException paramE) {
+            // TODO Auto-generated catch block
+            paramE.printStackTrace();
+        }
+    }
+    
+    private static ProductWine setWineFeatures(ProductWine p,Node attributes) {
+        Set<ProductFeature> featureSet = new HashSet<ProductFeature>();
+        for(int j = 0; j<attributes.getChildNodes().getLength();j++){
+            if(attributes.getChildNodes().item(j).getNodeName().equals("ProductAttribute")){
+               ProductFeature oFeature = null;
+               String feature = extractFieldFromSubNodeList(attributes.getChildNodes().item(j).getChildNodes(),"Name");
+               if(features.containsKey(feature)==false) {
+                   oFeature = new ProductFeature(null, feature);
+                   features.put(feature, oFeature);
+               } else {
+                   oFeature = (ProductFeature) features.get(feature);
+               }
+               featureSet.add(oFeature);
+            }
+        }
+        if(featureSet.isEmpty()==false) {
+            p.setFeatures(featureSet);
+            for (ProductFeature productFeature : featureSet) {
+                if(productFeature.getProducts()==null){
+                    productFeature.setProducts(new HashSet<Product>());
+                }
+                Set<Product> wines = productFeature.getProducts();
+                wines.add((Product)p);
+                productFeature.setProducts(wines);
+            }
+        }
+        return p;
     }
     
     private static String getWineDescription(Node attributes){
