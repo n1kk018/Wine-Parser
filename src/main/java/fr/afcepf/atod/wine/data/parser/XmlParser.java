@@ -496,16 +496,45 @@ public class XmlParser {
     
     public static void insert_translations(BeanFactory bf)
     { 
-        translateProductTypes(bf);
-        translateProductVarietals(bf);
-        translateProductAppellation(bf);
-        translateProductFeatures(bf);
-    }
-    
-    private static void translateProductTypes(BeanFactory bf) {
         IDaoProductType daoProductType = (IDaoProductType) bf.getBean(IDaoProductType.class);
+        IDaoProductWine daoProduct = (IDaoProductWine) bf.getBean(IDaoProductWine.class);
+        IDaoProductFeature daoProductFeature = (IDaoProductFeature) bf.getBean(IDaoProductFeature.class);
+        IDaoProductVarietal daoProductVarietal = (IDaoProductVarietal) bf.getBean(IDaoProductVarietal.class);
         try {
             List<ProductType> types = daoProductType.findAllObj();
+            List<ProductFeature> features = daoProductFeature.findAllObj();
+            translateProductTypes(types,daoProductType);
+            translateProductFeatures(features,daoProductFeature);
+            
+            Locale.setDefault(Locale.US);
+            List<ProductWine> products = daoProduct.findAllObj();
+            for (ProductWine product : products) {
+                Locale.setDefault(Locale.FRANCE);
+                String appellation = product.getAppellation()+" ";
+                product.setAppellation(appellation);
+                daoProduct.updateObj(product) ;
+                Locale.setDefault(Locale.US);
+            }
+            List<ProductVarietal> varietals = daoProductVarietal.findAllObj();
+            for (ProductVarietal productVarietal : varietals) {
+                Locale.setDefault(Locale.FRANCE);
+                String desc = productVarietal.getDescription()+ " ";
+                productVarietal.setDescription(desc);
+                daoProductVarietal.updateObj(productVarietal); 
+                Locale.setDefault(Locale.US);
+            }
+            products = daoProduct.findAllObj();
+            varietals = daoProductVarietal.findAllObj();
+            translateProductVarietals(varietals,daoProductVarietal);
+            translateProductAppellation(products,daoProduct);
+        } catch (WineException paramE) {
+            // TODO Auto-generated catch block
+            paramE.printStackTrace();
+        }
+    }
+    
+    private static void translateProductTypes(List<ProductType> types,IDaoProductType daoProductType) {
+        try {
             for (ProductType productType : types) {
                     String typefr = "";
                     if(productType.getType().contains("White Wines")){
@@ -528,22 +557,20 @@ public class XmlParser {
         }
     }
     
-    private static void translateProductAppellation(BeanFactory bf) {
-        IDaoProductWine daoProduct = (IDaoProductWine) bf.getBean(IDaoProductWine.class);
+    private static void translateProductAppellation(List<ProductWine> products,IDaoProductWine daoProduct) {
         try {
-            List<ProductWine> products = daoProduct.findAllObj();
             for (ProductWine product : products) {
-                String appellationfr = "";
-                String appelation = product.getAppellation();
-                if(appelation.contains("Other")) {
-                    appellationfr = "Autre appelation française";
-                } else if(appelation.contains("Burgundy")) {
-                    appellationfr = "Bourgogne";
+                String appelationfr = "";
+                String appellation = product.getAppellation();
+                if(appellation.contains("Other")) {
+                    appelationfr = "Autre appelation française";
+                } else if(appellation.contains("Burgundy")) {
+                    appelationfr = "Bourgogne";
                 } else {
-                    appellationfr = appelation;
+                    appelationfr = appellation;
                 }
                 Locale.setDefault(Locale.FRANCE);
-                product.setAppellation(appellationfr);
+                product.setAppellation(appelationfr);
                 daoProduct.updateObj(product) ;
                 Locale.setDefault(Locale.US);
             }
@@ -553,11 +580,11 @@ public class XmlParser {
         }
     }
     
-    private static void translateProductFeatures(BeanFactory bf) {
-        IDaoProductFeature daoProductFeature = (IDaoProductFeature) bf.getBean(IDaoProductFeature.class);
+    private static void translateProductFeatures(List<ProductFeature> features, IDaoProductFeature daoProductFeature) {
+        
         HashMap<String, String> featuresTrad = new HashMap<String,String>();
         try {
-            List<ProductFeature> features = daoProductFeature.findAllObj();
+            
             featuresTrad.put("Precious Wine","Vin rare");
             featuresTrad.put("Has Large Label","Large étiquette");
             featuresTrad.put("Bordeaux Futures","Bordeaux en primeurs");
@@ -586,22 +613,20 @@ public class XmlParser {
             featuresTrad.put("Boutique Wines", "Vin apprécié en boutique");
             featuresTrad.put("Champagne Gifts", "Champagne parfait pour offrir");
             featuresTrad.put("Collectible Wines", "Vins de collection");
-            Locale.setDefault(Locale.FRANCE);
             for (ProductFeature pf : features) {
+                Locale.setDefault(Locale.FRANCE);
                 pf.setLabel(featuresTrad.get(pf.getLabel()));
                 daoProductFeature.updateObj(pf); 
+                Locale.setDefault(Locale.US);
             }
-            Locale.setDefault(Locale.US);
         } catch (WineException paramE) {
             // TODO Auto-generated catch block
             paramE.printStackTrace();
         }
     }
     
-    private static void translateProductVarietals(BeanFactory bf) {
-        IDaoProductVarietal daoProductVarietal = (IDaoProductVarietal) bf.getBean(IDaoProductVarietal.class);
+    private static void translateProductVarietals(List<ProductVarietal> varietals,IDaoProductVarietal daoProductVarietal) {
         try {
-            List<ProductVarietal> varietals = daoProductVarietal.findAllObj();
             for (ProductVarietal productVarietal : varietals) {
                     String varietalfr = "";
                     String desc = productVarietal.getDescription();
