@@ -501,32 +501,14 @@ public class XmlParser {
         IDaoProductFeature daoProductFeature = (IDaoProductFeature) bf.getBean(IDaoProductFeature.class);
         IDaoProductVarietal daoProductVarietal = (IDaoProductVarietal) bf.getBean(IDaoProductVarietal.class);
         try {
-            List<ProductType> types = daoProductType.findAllObj();
-            List<ProductFeature> features = daoProductFeature.findAllObj();
-            translateProductTypes(types,daoProductType);
-            translateProductFeatures(features,daoProductFeature);
-            
-            Locale.setDefault(Locale.US);
             List<ProductWine> products = daoProduct.findAllObj();
-            for (ProductWine product : products) {
-                Locale.setDefault(Locale.FRANCE);
-                String appellation = product.getAppellation()+" ";
-                product.setAppellation(appellation);
-                daoProduct.updateObj(product) ;
-                Locale.setDefault(Locale.US);
-            }
-            List<ProductVarietal> varietals = daoProductVarietal.findAllObj();
-            for (ProductVarietal productVarietal : varietals) {
-                Locale.setDefault(Locale.FRANCE);
-                String desc = productVarietal.getDescription()+ " ";
-                productVarietal.setDescription(desc);
-                daoProductVarietal.updateObj(productVarietal); 
-                Locale.setDefault(Locale.US);
-            }
-            products = daoProduct.findAllObj();
-            varietals = daoProductVarietal.findAllObj();
-            translateProductVarietals(varietals,daoProductVarietal);
             translateProductAppellation(products,daoProduct);
+            List<ProductType> types = daoProductType.findAllObj();
+            translateProductTypes(types,daoProductType);
+            List<ProductFeature> features = daoProductFeature.findAllObj();
+            translateProductFeatures(features,daoProductFeature);
+            List<ProductVarietal> varietals = daoProductVarietal.findAllObj();
+            translateProductVarietals(varietals,daoProductVarietal);
         } catch (WineException paramE) {
             // TODO Auto-generated catch block
             paramE.printStackTrace();
@@ -534,7 +516,9 @@ public class XmlParser {
     }
     
     private static void translateProductTypes(List<ProductType> types,IDaoProductType daoProductType) {
+        
         try {
+            
             for (ProductType productType : types) {
                     String typefr = "";
                     if(productType.getType().contains("White Wines")){
@@ -551,6 +535,7 @@ public class XmlParser {
                     daoProductType.updateObj(productType); 
                     Locale.setDefault(Locale.US);
             }
+            
         } catch (WineException paramE) {
             // TODO Auto-generated catch block
             paramE.printStackTrace();
@@ -559,6 +544,7 @@ public class XmlParser {
     
     private static void translateProductAppellation(List<ProductWine> products,IDaoProductWine daoProduct) {
         try {
+            Locale.setDefault(Locale.FRANCE);
             for (ProductWine product : products) {
                 String appelationfr = "";
                 String appellation = product.getAppellation();
@@ -569,11 +555,10 @@ public class XmlParser {
                 } else {
                     appelationfr = appellation;
                 }
-                Locale.setDefault(Locale.FRANCE);
                 product.setAppellation(appelationfr);
-                daoProduct.updateObj(product) ;
-                Locale.setDefault(Locale.US);
+                daoProduct.updateWithEvictObj(product) ;
             }
+            Locale.setDefault(Locale.US);
         } catch (WineException paramE) {
             // TODO Auto-generated catch block
             paramE.printStackTrace();
@@ -584,7 +569,7 @@ public class XmlParser {
         
         HashMap<String, String> featuresTrad = new HashMap<String,String>();
         try {
-            
+            Locale.setDefault(Locale.FRANCE);
             featuresTrad.put("Precious Wine","Vin rare");
             featuresTrad.put("Has Large Label","Large étiquette");
             featuresTrad.put("Bordeaux Futures","Bordeaux en primeurs");
@@ -614,11 +599,10 @@ public class XmlParser {
             featuresTrad.put("Champagne Gifts", "Champagne parfait pour offrir");
             featuresTrad.put("Collectible Wines", "Vins de collection");
             for (ProductFeature pf : features) {
-                Locale.setDefault(Locale.FRANCE);
                 pf.setLabel(featuresTrad.get(pf.getLabel()));
                 daoProductFeature.updateObj(pf); 
-                Locale.setDefault(Locale.US);
             }
+            Locale.setDefault(Locale.US);
         } catch (WineException paramE) {
             // TODO Auto-generated catch block
             paramE.printStackTrace();
@@ -627,10 +611,11 @@ public class XmlParser {
     
     private static void translateProductVarietals(List<ProductVarietal> varietals,IDaoProductVarietal daoProductVarietal) {
         try {
+            Locale.setDefault(Locale.FRANCE);
             for (ProductVarietal productVarietal : varietals) {
                     String varietalfr = "";
                     String desc = productVarietal.getDescription();
-                    if(productVarietal.getDescription().contains("Other")){
+                    if(desc.contains("Other")){
                         if(desc.contains("Blends")) {
                             varietalfr = "Autres assemblages de vins rouges";
                         } else {
@@ -643,15 +628,14 @@ public class XmlParser {
                     } else if(desc.contains("Rhone")){
                         varietalfr = "Assemblages de vins rouges du Rhône";
                     } else if(desc.contains("Vintage")){
-                        varietalfr = desc.replace("Vintage", "Millesimé");
+                        varietalfr = "Millesimé";
                     }else {
                         varietalfr = desc;
                     }
-                    Locale.setDefault(Locale.FRANCE);
                     productVarietal.setDescription(varietalfr);
                     daoProductVarietal.updateObj(productVarietal); 
-                    Locale.setDefault(Locale.US);
             }
+            Locale.setDefault(Locale.US);
         } catch (WineException paramE) {
             // TODO Auto-generated catch block
             paramE.printStackTrace();
