@@ -8,19 +8,16 @@ import fr.afcepf.atod.wine.data.admin.api.IDaoSpecialEvent;
 import fr.afcepf.atod.wine.data.order.api.IDaoPaymentInfo;
 import fr.afcepf.atod.wine.data.order.api.IDaoShippingMethode;
 import fr.afcepf.atod.wine.data.product.api.IDaoAdress;
-import fr.afcepf.atod.wine.data.product.api.IDaoCity;
 import fr.afcepf.atod.wine.data.product.api.IDaoCountry;
 import fr.afcepf.atod.wine.data.product.api.IDaoProduct;
 import fr.afcepf.atod.wine.data.product.api.IDaoProductFeature;
 import fr.afcepf.atod.wine.data.product.api.IDaoProductType;
 import fr.afcepf.atod.wine.data.product.api.IDaoProductVarietal;
 import fr.afcepf.atod.wine.data.product.api.IDaoProductWine;
-import fr.afcepf.atod.wine.data.product.api.IDaoRegion;
 import fr.afcepf.atod.wine.data.product.api.IDaoSupplier;
 import fr.afcepf.atod.wine.data.product.impl.DaoProductFeature;
 import fr.afcepf.atod.wine.entity.Admin;
 import fr.afcepf.atod.wine.entity.Adress;
-import fr.afcepf.atod.wine.entity.City;
 import fr.afcepf.atod.wine.entity.Civility;
 import fr.afcepf.atod.wine.entity.Country;
 import fr.afcepf.atod.wine.entity.Customer;
@@ -33,7 +30,6 @@ import fr.afcepf.atod.wine.entity.ProductType;
 import fr.afcepf.atod.wine.entity.ProductVarietal;
 import fr.afcepf.atod.wine.entity.ProductVintage;
 import fr.afcepf.atod.wine.entity.ProductWine;
-import fr.afcepf.atod.wine.entity.Region;
 import fr.afcepf.atod.wine.entity.ShippingMethod;
 import fr.afcepf.atod.wine.entity.SpecialEvent;
 import fr.afcepf.atod.wine.entity.Supplier;
@@ -160,8 +156,6 @@ public class XmlParser {
         IDaoAdmin daoAdmin = bf.getBean(IDaoAdmin.class);
         IDaoSpecialEvent daoEvent = bf.getBean(IDaoSpecialEvent.class);
         IDaoCountry daoCountry = bf.getBean(IDaoCountry.class);
-        IDaoRegion daoRegion = bf.getBean(IDaoRegion.class);
-        IDaoCity daoCity = bf.getBean(IDaoCity.class);
         IDaoAdress daoAdr= bf.getBean(IDaoAdress.class);
         IDaoCustomer daoCustomer =bf.getBean(IDaoCustomer.class);
         IDaoShippingMethode daoShippingMethod = bf.getBean(IDaoShippingMethode.class);
@@ -169,10 +163,35 @@ public class XmlParser {
         IDaoProductFeature daoFeature = (IDaoProductFeature) bf.getBean(IDaoProductFeature.class);
         
         try {
-			daoAdr.insertObj(new Adress(null, "rue de rivoli", "18", false, 
-					daoCity.insertObj(new City(null, "75001", "Paris", 
-							daoRegion.insertObj(new Region(null,"Idf",
-									daoCountry.insertObj(new Country(null,"France"))))))));
+            daoCountry.insertObj(new Country(null,"AT", "Autriche"));
+            daoCountry.insertObj(new Country(null,"BE", "Belgique"));
+            daoCountry.insertObj(new Country(null,"BG", "Bulgarie"));
+            daoCountry.insertObj(new Country(null,"CY", "Chypre"));
+            daoCountry.insertObj(new Country(null,"CZ", "République Tchèque"));
+            daoCountry.insertObj(new Country(null,"DE", "Allemagne"));
+            daoCountry.insertObj(new Country(null,"DK", "Danemark"));
+            daoCountry.insertObj(new Country(null,"EE", "Estonie"));
+            daoCountry.insertObj(new Country(null,"ES", "Espagne"));
+            daoCountry.insertObj(new Country(null,"FI", "Finlande"));
+            daoCountry.insertObj(new Country(null,"GB", "Royaume-Uni"));
+            daoCountry.insertObj(new Country(null,"GR", "Grèce"));
+            daoCountry.insertObj(new Country(null,"HU", "Hongrie"));
+            daoCountry.insertObj(new Country(null,"IE", "Irlande"));
+            daoCountry.insertObj(new Country(null,"IT", "Italie"));
+            daoCountry.insertObj(new Country(null,"JP", "Japon"));
+            daoCountry.insertObj(new Country(null,"LT", "Lituanie"));
+            daoCountry.insertObj(new Country(null,"LU", "Luxembourg"));
+            daoCountry.insertObj(new Country(null,"LV", "Lettonie"));
+            daoCountry.insertObj(new Country(null,"MT", "Malte"));
+            daoCountry.insertObj(new Country(null,"NL", "Pays-Bas"));
+            daoCountry.insertObj(new Country(null,"PL", "Pologne"));
+            daoCountry.insertObj(new Country(null,"PT", "Portugal"));
+            daoCountry.insertObj(new Country(null,"RO", "Roumanie"));
+            daoCountry.insertObj(new Country(null,"SE", "Suède"));
+            daoCountry.insertObj(new Country(null,"SI", "Slovénie"));
+            daoCountry.insertObj(new Country(null,"SK", "Slovaquie"));
+            daoCountry.insertObj(new Country(null,"US", "Etats-Unis"));
+            daoCountry.insertObj(new Country(null,"FR","France"));
 		} catch (WineException e2) {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
@@ -184,16 +203,20 @@ public class XmlParser {
         Customer customer3 = null;
         
 		try {
-			admin = new Admin(null, "strateur", "admini", new Date(), "nicolastorero@gmail.com", "nicolastorero@gmail.com", "test1234", "0680413240", new Date(), new Date(), Civility.MR,daoAdr.findObj(1));
-			customer1 = new Customer(null, "Wang", "Fen", new Date(), "fenwang@hotmail.com", "fenwang@hotmail.com", "test1234", "0666666666", new Date(), new Date(), Civility.MISS, daoAdr.findObj(1), true);
-			customer2 = new Customer(null, "Anes", "Zouheir", new Date(), "zouheir.anes@gmail.com", "zouheir.anes@gmail.com", "test1234", "0666666666", new Date(), new Date(), Civility.MR, daoAdr.findObj(1), true);
-			customer3 = new Customer(null, "Storero", "Nicolas", new Date(), "nicolastorero@gmail.com", "nicolastorero@gmail.com", "test1234", "0666666666", new Date(), new Date(), Civility.MR, daoAdr.findObj(1), true);
+			admin = new Admin(null, "strateur", "admini", new Date(), "nicolastorero@gmail.com", "nicolastorero@gmail.com", "test1234", "0680413240", new Date(), new Date(), Civility.MR);
+			customer1 = new Customer(null, "Wang", "Fen", new Date(), "fenwang@hotmail.com", "fenwang@hotmail.com", "test1234", "0666666666", new Date(), new Date(), Civility.MISS, true);
+			customer2 = new Customer(null, "Anes", "Zouheir", new Date(), "zouheir.anes@gmail.com", "zouheir.anes@gmail.com", "test1234", "0666666666", new Date(), new Date(), Civility.MR, true);
+			customer3 = new Customer(null, "Storero", "Nicolas", new Date(), "nicolastorero@gmail.com", "nicolastorero@gmail.com", "test1234", "0666666666", new Date(), new Date(), Civility.MR, true);
 			daoAdmin.insertObj(admin);
 			daoShippingMethod.insertObj(new ShippingMethod(null,"Colissimo"));
 			daoPayment.insertObj(new PaymentInfo(null,"Visa"));
 			daoCustomer.insertObj(customer1);
 			daoCustomer.insertObj(customer2);
-			daoCustomer.insertObj(customer3);
+			
+			customer3.addAdress(new Adress(null, "rue de rivoli", "18", "75001", "Paris",
+                    daoCountry.findObj(29),false));
+            
+            daoCustomer.updateObj(customer3);
 		} catch (WineException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
