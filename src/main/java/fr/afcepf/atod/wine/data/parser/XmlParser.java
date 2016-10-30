@@ -212,10 +212,11 @@ public class XmlParser {
 			daoPayment.insertObj(new PaymentInfo(null,"Visa"));
 			daoCustomer.insertObj(customer1);
 			daoCustomer.insertObj(customer2);
-			
+			Country c = daoCountry.findObj(29);
 			customer3.addAdress(new Adress(null, "rue de rivoli", "18", "75001", "Paris",
-                    daoCountry.findObj(29),false));
-            
+                    c, false));
+			customer3.addAdress(new Adress(null, "rue de rivoli", "18", "75001", "Paris",
+                    c, true));
             daoCustomer.updateObj(customer3);
 		} catch (WineException e1) {
 			// TODO Auto-generated catch block
