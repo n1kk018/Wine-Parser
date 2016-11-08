@@ -1,6 +1,14 @@
 package fr.afcepf.atod.wine.data.parser;
 
 import fr.afcepf.atod.customer.data.api.IDaoCustomer;
+import fr.afcepf.atod.es.ElasticsearchConfiguration;
+import fr.afcepf.atod.es.domain.Wine;
+import fr.afcepf.atod.es.domain.WineFeature;
+import fr.afcepf.atod.es.domain.WineType;
+import fr.afcepf.atod.es.domain.WineVarietal;
+import fr.afcepf.atod.es.domain.WineVintage;
+import fr.afcepf.atod.es.repository.WineRepository;
+import fr.afcepf.atod.es.service.WineService;
 import fr.afcepf.atod.vin.data.exception.WineException;
 import fr.afcepf.atod.wine.data.admin.api.IDaoAdmin;
 
@@ -15,7 +23,6 @@ import fr.afcepf.atod.wine.data.product.api.IDaoProductType;
 import fr.afcepf.atod.wine.data.product.api.IDaoProductVarietal;
 import fr.afcepf.atod.wine.data.product.api.IDaoProductWine;
 import fr.afcepf.atod.wine.data.product.api.IDaoSupplier;
-import fr.afcepf.atod.wine.data.product.impl.DaoProductFeature;
 import fr.afcepf.atod.wine.entity.Admin;
 import fr.afcepf.atod.wine.entity.Adress;
 import fr.afcepf.atod.wine.entity.Civility;
@@ -43,11 +50,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.Set;
 import java.util.logging.Level;
 
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -56,6 +61,10 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -71,6 +80,7 @@ import org.w3c.dom.NodeList;
  *
  * @author ronan
  */
+@ComponentScan(basePackages = {"fr.afcepf.atod.es.service"})
 public class XmlParser {
 
     private static Logger log = Logger.getLogger(XmlParser.class);
@@ -156,12 +166,13 @@ public class XmlParser {
         IDaoAdmin daoAdmin = bf.getBean(IDaoAdmin.class);
         IDaoSpecialEvent daoEvent = bf.getBean(IDaoSpecialEvent.class);
         IDaoCountry daoCountry = bf.getBean(IDaoCountry.class);
-        IDaoAdress daoAdr= bf.getBean(IDaoAdress.class);
         IDaoCustomer daoCustomer =bf.getBean(IDaoCustomer.class);
         IDaoShippingMethode daoShippingMethod = bf.getBean(IDaoShippingMethode.class);
         IDaoPaymentInfo daoPayment = bf.getBean(IDaoPaymentInfo.class);
         IDaoProductFeature daoFeature = (IDaoProductFeature) bf.getBean(IDaoProductFeature.class);
-        
+        BeanFactory bf2 = new AnnotationConfigApplicationContext(ElasticsearchConfiguration.class);
+        WineService esRepository = (WineService) bf2.getBean(WineService.class);
+        esRepository.deleteAll();
         try {
             daoCountry.insertObj(new Country(null,"AT", "Autriche", "EUR", "flaticon-euro-currency-symbol"));
             daoCountry.insertObj(new Country(null,"BE", "Belgique", "EUR", "flaticon-euro-currency-symbol"));
@@ -189,7 +200,6 @@ public class XmlParser {
             daoCountry.insertObj(new Country(null,"RO", "Roumanie", "EUR", "flaticon-euro-currency-symbol"));
             daoCountry.insertObj(new Country(null,"SE", "Suède", "SEK", "flaticon-sweden-krona-currency-symbol"));
             daoCountry.insertObj(new Country(null,"SI", "Slovénie", "EUR", "flaticon-euro-currency-symbol"));
-            daoCountry.insertObj(new Country(null,"SK", "Slovaquie", "EUR", "flaticon-euro-currency-symbol"));
             daoCountry.insertObj(new Country(null,"US", "Etats-Unis", "USD", "flaticon-dollar-currency-symbol-2"));
             daoCountry.insertObj(new Country(null,"FR","France", "EUR", "flaticon-euro-currency-symbol"));
 		} catch (WineException e2) {
@@ -292,6 +302,17 @@ public class XmlParser {
                         productWine.setSpeEvent(se);
                     }
                     daoVin.insertObj(productWine);
+                    Wine esWine = new Wine(productWine.getId(),
+                            productWine.getName(), 
+                            productWine.getAppellation(),
+                            productWine.getPrice(),
+                            new WineType(productWine.getProductType().getId(),productWine.getProductType().getType()), 
+                            new WineVintage(((productWine.getProductVintage()!=null)?productWine.getProductVintage().getYear():0)), 
+                            new WineVarietal(productWine.getProductVarietal().getId(),productWine.getProductVarietal().getDescription()));
+                    for (ProductFeature feat : productWine.getFeatures()) {
+                        esWine.addFeature(new WineFeature(feat.getId(), feat.getLabel()));
+                    }
+                    esRepository.save(esWine);
                     cpt++;
                 }
             }
@@ -368,7 +389,7 @@ public class XmlParser {
 			e.printStackTrace();
 		} 
         //http://cdn.fluidretail.net/customers/c1477/13/68/80/_s/pi/n/136880_spin_spin2/main_variation_na_view_01_204x400.jpg*/
-        insert_translations(bf);
+        insert_translations(bf,bf2);
         log.info("\t ### Fin du test ###");
     }
     
@@ -518,28 +539,30 @@ public class XmlParser {
     	return oType;
     }
     
-    public static void insert_translations(BeanFactory bf)
+    
+    public static void insert_translations(BeanFactory bf, BeanFactory bf2)
     { 
         IDaoProductType daoProductType = (IDaoProductType) bf.getBean(IDaoProductType.class);
         IDaoProductWine daoProduct = (IDaoProductWine) bf.getBean(IDaoProductWine.class);
         IDaoProductFeature daoProductFeature = (IDaoProductFeature) bf.getBean(IDaoProductFeature.class);
         IDaoProductVarietal daoProductVarietal = (IDaoProductVarietal) bf.getBean(IDaoProductVarietal.class);
+        WineService esRepository = (WineService) bf2.getBean(WineService.class);
         try {
             List<ProductWine> products = daoProduct.findAllObj();
-            translateProductAppellation(products,daoProduct);
+            translateProductAppellation(products,daoProduct,esRepository);
             List<ProductType> types = daoProductType.findAllObj();
-            translateProductTypes(types,daoProductType);
+            translateProductTypes(types,daoProductType,esRepository);
             List<ProductFeature> features = daoProductFeature.findAllObj();
-            translateProductFeatures(features,daoProductFeature);
+            translateProductFeatures(features,daoProductFeature,esRepository);
             List<ProductVarietal> varietals = daoProductVarietal.findAllObj();
-            translateProductVarietals(varietals,daoProductVarietal);
+            translateProductVarietals(varietals,daoProductVarietal,esRepository);
         } catch (WineException paramE) {
             // TODO Auto-generated catch block
             paramE.printStackTrace();
         }
     }
     
-    private static void translateProductTypes(List<ProductType> types,IDaoProductType daoProductType) {
+    private static void translateProductTypes(List<ProductType> types,IDaoProductType daoProductType, WineService esRepository) {
         
         try {
             
@@ -556,7 +579,12 @@ public class XmlParser {
                     }
                     Locale.setDefault(Locale.FRANCE);
                     productType.setType(typefr);
-                    daoProductType.updateObj(productType); 
+                    daoProductType.updateObj(productType);
+                    List<Wine> list = esRepository.findByWineTypeId(productType.getId());
+                    for (Wine wine : list) {
+                        wine.getType().setType(typefr);
+                        esRepository.save(wine);
+                    }
                     Locale.setDefault(Locale.US);
             }
             
@@ -566,7 +594,7 @@ public class XmlParser {
         }
     }
     
-    private static void translateProductAppellation(List<ProductWine> products,IDaoProductWine daoProduct) {
+    private static void translateProductAppellation(List<ProductWine> products,IDaoProductWine daoProduct, WineService esRepository) {
         try {
             Locale.setDefault(Locale.FRANCE);
             for (ProductWine product : products) {
@@ -581,6 +609,9 @@ public class XmlParser {
                 }
                 product.setAppellation(appelationfr);
                 daoProduct.updateWithEvictObj(product) ;
+                Wine esWine = esRepository.getById(product.getId());
+                esWine.setAppellation(appelationfr);
+                esRepository.save(esWine);
             }
             Locale.setDefault(Locale.US);
         } catch (WineException paramE) {
@@ -589,7 +620,7 @@ public class XmlParser {
         }
     }
     
-    private static void translateProductFeatures(List<ProductFeature> features, IDaoProductFeature daoProductFeature) {
+    private static void translateProductFeatures(List<ProductFeature> features, IDaoProductFeature daoProductFeature, WineService esRepository) {
         
         HashMap<String, String> featuresTrad = new HashMap<String,String>();
         try {
@@ -623,17 +654,26 @@ public class XmlParser {
             featuresTrad.put("Champagne Gifts", "Champagne parfait pour offrir");
             featuresTrad.put("Collectible Wines", "Vins de collection");
             for (ProductFeature pf : features) {
-                pf.setLabel(featuresTrad.get(pf.getLabel()));
+                String label_fr = featuresTrad.get(pf.getLabel());
+                pf.setLabel(label_fr);
                 daoProductFeature.updateObj(pf); 
+                List<Wine> list = esRepository.findByWineFeatureId(pf.getId());
+                for (Wine wine : list) {
+                    for (WineFeature feat : wine.getFeatures()) {
+                        if(feat.getId().equals(pf.getId())) {
+                            feat.setLabel(label_fr);
+                        }
+                    }
+                    esRepository.save(wine);
+                }
             }
             Locale.setDefault(Locale.US);
         } catch (WineException paramE) {
-            // TODO Auto-generated catch block
             paramE.printStackTrace();
         }
     }
     
-    private static void translateProductVarietals(List<ProductVarietal> varietals,IDaoProductVarietal daoProductVarietal) {
+    private static void translateProductVarietals(List<ProductVarietal> varietals,IDaoProductVarietal daoProductVarietal, WineService esRepository) {
         try {
             Locale.setDefault(Locale.FRANCE);
             for (ProductVarietal productVarietal : varietals) {
@@ -657,7 +697,12 @@ public class XmlParser {
                         varietalfr = desc;
                     }
                     productVarietal.setDescription(varietalfr);
-                    daoProductVarietal.updateObj(productVarietal); 
+                    daoProductVarietal.updateObj(productVarietal);
+                    List<Wine> list = esRepository.findByWineVarietalId(productVarietal.getId());
+                    for (Wine wine : list) {
+                        wine.getVarietal().setDescription(varietalfr);
+                        esRepository.save(wine);
+                    }
             }
             Locale.setDefault(Locale.US);
         } catch (WineException paramE) {
