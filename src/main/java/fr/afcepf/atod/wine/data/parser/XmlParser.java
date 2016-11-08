@@ -302,6 +302,7 @@ public class XmlParser {
                             productWine.getName(), 
                             productWine.getAppellation(),
                             productWine.getPrice(),
+                            productWine.getApiId(),
                             new WineType(productWine.getProductType().getId(),productWine.getProductType().getType()), 
                             new WineVintage(((productWine.getProductVintage()!=null)?productWine.getProductVintage().getYear():0)), 
                             new WineVarietal(productWine.getProductVarietal().getId(),productWine.getProductVarietal().getDescription()));
