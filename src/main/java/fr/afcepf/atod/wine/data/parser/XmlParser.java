@@ -156,6 +156,9 @@ public class XmlParser {
 			e.printStackTrace();
 		}*/
         Locale.setDefault(Locale.US);
+        BeanFactory bf2 = new AnnotationConfigApplicationContext(ElasticsearchConfiguration.class);
+        WineService esRepository = (WineService) bf2.getBean(WineService.class);
+        esRepository.deleteIdx();
         BeanFactory bf = new ClassPathXmlApplicationContext("classpath:springData.xml");
         IDaoProduct daoVin = (IDaoProduct) bf.getBean(IDaoProduct.class);
         IDaoSupplier daoSupplier = (IDaoSupplier) bf.getBean(IDaoSupplier.class);
@@ -166,9 +169,6 @@ public class XmlParser {
         IDaoShippingMethode daoShippingMethod = bf.getBean(IDaoShippingMethode.class);
         IDaoPaymentInfo daoPayment = bf.getBean(IDaoPaymentInfo.class);
         IDaoProductFeature daoFeature = (IDaoProductFeature) bf.getBean(IDaoProductFeature.class);
-        BeanFactory bf2 = new AnnotationConfigApplicationContext(ElasticsearchConfiguration.class);
-        WineService esRepository = (WineService) bf2.getBean(WineService.class);
-        esRepository.deleteAll();
         try {
             daoCountry.insertObj(new Country(null,"AT", "Autriche", "EUR", "flaticon-euro-currency-symbol"));
             daoCountry.insertObj(new Country(null,"BE", "Belgique", "EUR", "flaticon-euro-currency-symbol"));
