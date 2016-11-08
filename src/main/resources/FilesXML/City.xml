@@ -1,0 +1,65 @@
+<DATA>
+
+	<ROW>
+		<id>1</id>
+		<name>Paris</name>
+		<zipcode>75010</zipcode>
+		<idRegion>21</idRegion>
+	</ROW>
+
+	<ROW>
+		<id>2</id>
+		<name>Nanterre</name>
+		<zipcode>92000</zipcode>
+		<idRegion>21</idRegion>
+	</ROW>
+
+	<ROW>
+		<id>3</id>
+		<name>Versailles</name>
+		<zipcode>78000</zipcode>
+		<idRegion>21</idRegion>
+	</ROW>
+
+	<ROW>
+		<id>4</id>
+		<name>Auxerre</name>
+		<zipcode>89000</zipcode>
+		<idRegion>22</idRegion>
+	</ROW>
+
+	<ROW>
+		<id>5</id>
+		<name>Bordeaux</name>
+		<zipcode>33000</zipcode>
+		<idRegion>20</idRegion>
+	</ROW>
+
+	<ROW>
+		<id>6</id>
+		<name>Malakoff</name>
+		<zipcode>92240</zipcode>
+		<idRegion>21</idRegion>
+	</ROW>
+
+	<ROW>
+		<id>7</id>
+		<name>Antony</name>
+		<zipcode>92160</zipcode>
+		<idRegion>21</idRegion>
+	</ROW>
+
+	<ROW>
+		<id>8</id>
+		<name>Pantin</name>
+		<zipcode>93500</zipcode>
+		<idRegion>21</idRegion>
+	</ROW>
+
+	<ROW>
+		<id>9</id>
+		<name>Rueil Malmaison</name>
+		<zipcode>92480</zipcode>
+		<idRegion>21</idRegion>
+	</ROW>
+</DATA>

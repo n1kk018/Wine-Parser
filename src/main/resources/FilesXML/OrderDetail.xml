@@ -1,0 +1,128 @@
+<DATA>
+
+	<ROW>
+		<Id>1</Id>
+		<quantite>2</quantite>
+		<idOrder>1</idOrder>
+		<idProduct>462</idProduct>
+	</ROW>
+
+	<ROW>
+		<Id>2</Id>
+		<quantite>1</quantite>
+		<idOrder>1</idOrder>
+		<idProduct>428</idProduct>
+	</ROW>
+
+	<ROW>
+		<Id>3</Id>
+		<quantite>2</quantite>
+		<idOrder>1</idOrder>
+		<idProduct>300</idProduct>
+	</ROW>
+
+	<ROW>
+		<Id>4</Id>
+		<quantite>4</quantite>
+		<idOrder>1</idOrder>
+		<idProduct>455</idProduct>
+	</ROW>
+
+	<ROW>
+		<Id>5</Id>
+		<quantite>1</quantite>
+		<idOrder>2</idOrder>
+		<idProduct>412</idProduct>
+	</ROW>
+
+	<ROW>
+		<Id>6</Id>
+		<quantite>1</quantite>
+		<idOrder>2</idOrder>
+		<idProduct>415</idProduct>
+	</ROW>
+
+	<ROW>
+		<Id>7</Id>
+		<quantite>1</quantite>
+		<idOrder>3</idOrder>
+		<idProduct>57</idProduct>
+	</ROW>
+
+	<ROW>
+		<Id>8</Id>
+		<quantite>2</quantite>
+		<idOrder>4</idOrder>
+		<idProduct>207</idProduct>
+	</ROW>
+
+	<ROW>
+		<Id>9</Id>
+		<quantite>1</quantite>
+		<idOrder>5</idOrder>
+		<idProduct>205</idProduct>
+	</ROW>
+
+	<ROW>
+		<Id>10</Id>
+		<quantite>1</quantite>
+		<idOrder>5</idOrder>
+		<idProduct>288</idProduct>
+	</ROW>
+
+	<ROW>
+		<Id>11</Id>
+		<quantite>4</quantite>
+		<idOrder>6</idOrder>
+		<idProduct>215</idProduct>
+	</ROW>
+
+	<ROW>
+		<Id>12</Id>
+		<quantite>1</quantite>
+		<idOrder>7</idOrder>
+		<idProduct>7</idProduct>
+	</ROW>
+
+	<ROW>
+		<Id>13</Id>
+		<quantite>1</quantite>
+		<idOrder>7</idOrder>
+		<idProduct>76</idProduct>
+	</ROW>
+
+	<ROW>
+		<Id>14</Id>
+		<quantite>1</quantite>
+		<idOrder>8</idOrder>
+		<idProduct>413</idProduct>
+	</ROW>
+
+	<ROW>
+		<Id>15</Id>
+		<quantite>1</quantite>
+		<idOrder>8</idOrder>
+		<idProduct>432</idProduct>
+	</ROW>
+
+	<ROW>
+		<Id>16</Id>
+		<quantite>1</quantite>
+		<idOrder>9</idOrder>
+		<idProduct>204</idProduct>
+	</ROW>
+
+	<ROW>
+		<Id>17</Id>
+		<quantite>1</quantite>
+		<idOrder>9</idOrder>
+		<idProduct>208</idProduct>
+	</ROW>
+
+	<ROW>
+		<Id>18</Id>
+		<quantite>1</quantite>
+		<idOrder>9</idOrder>
+		<idProduct>226</idProduct>
+	</ROW>
+</DATA>

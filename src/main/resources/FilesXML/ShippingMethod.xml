@@ -1,0 +1,17 @@
+<DATA>
+
+	<ROW>
+		<id>1</id>
+		<information>Point Relais</information>
+	</ROW>
+
+	<ROW>
+		<id>2</id>
+		<information>Chronopost</information>
+	</ROW>
+
+	<ROW>
+		<id>3</id>
+		<information>Express</information>
+	</ROW>
+</DATA>

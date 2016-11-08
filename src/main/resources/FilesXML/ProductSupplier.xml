@@ -1,0 +1,5002 @@
+<DATA>
+
+	<ROW>
+		<id_Product>1</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>2</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>3</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>4</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>5</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>6</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>7</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>8</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>9</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>10</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>11</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>12</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>13</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>14</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>15</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>16</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>17</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>18</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>19</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>20</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>21</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>22</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>23</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>24</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>25</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>26</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>27</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>28</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>29</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>30</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>31</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>32</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>33</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>34</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>35</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>36</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>37</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>38</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>39</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>40</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>41</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>42</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>43</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>44</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>45</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>46</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>47</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>48</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>49</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>50</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>51</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>52</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>53</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>54</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>55</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>56</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>57</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>58</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>59</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>60</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>61</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>62</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>63</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>64</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>65</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>66</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>67</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>68</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>69</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>70</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>71</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>72</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>73</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>74</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>75</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>76</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>77</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>78</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>79</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>80</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>81</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>82</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>83</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>84</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>85</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>86</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>87</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>88</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>89</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>90</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>91</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>92</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>93</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>94</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>95</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>96</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>97</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>98</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>99</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>100</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>101</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>102</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>103</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>104</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>105</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>106</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>107</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>108</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>109</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>110</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>111</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>112</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>113</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>114</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>115</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>116</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>117</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>118</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>119</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>120</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>121</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>122</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>123</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>124</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>125</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>126</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>127</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>128</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>129</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>130</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>131</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>132</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>133</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>134</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>135</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>136</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>137</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>138</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>139</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>140</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>141</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>142</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>143</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>144</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>145</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>146</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>147</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>148</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>149</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>150</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>151</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>152</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>153</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>154</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>155</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>156</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>157</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>158</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>159</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>160</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>161</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>162</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>163</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>164</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>165</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>166</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>167</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>168</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>169</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>170</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>171</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>172</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>173</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>174</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>175</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>176</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>177</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>178</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>179</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>180</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>181</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>182</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>183</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>184</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>185</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>186</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>187</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>188</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>189</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>190</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>191</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>192</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>193</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>194</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>195</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>196</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>197</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>198</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>199</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>200</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>201</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>202</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>203</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>204</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>205</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>206</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>207</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>208</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>209</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>210</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>211</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>212</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>213</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>214</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>215</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>216</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>217</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>218</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>219</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>220</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>221</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>222</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>223</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>224</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>225</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>226</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>227</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>228</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>229</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>230</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>231</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>232</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>233</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>234</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>235</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>236</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>237</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>238</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>239</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>240</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>241</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>242</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>243</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>244</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>245</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>246</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>247</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>248</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>249</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>250</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>251</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>252</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>253</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>254</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>255</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>256</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>257</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>258</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>259</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>260</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>261</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>262</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>263</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>264</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>265</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>266</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>267</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>268</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>269</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>270</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>271</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>272</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>273</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>274</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>275</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>276</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>277</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>278</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>279</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>280</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>281</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>282</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>283</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>284</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>285</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>286</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>287</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>288</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>289</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>290</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>291</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>292</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>293</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>294</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>295</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>296</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>297</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>298</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>299</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>300</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>301</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>302</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>303</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>304</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>305</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>306</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>307</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>308</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>309</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>310</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>311</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>312</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>313</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>314</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>315</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>316</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>317</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>318</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>319</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>320</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>321</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>322</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>323</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>324</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>325</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>326</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>327</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>328</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>329</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>330</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>331</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>332</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>333</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>334</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>335</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>336</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>337</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>338</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>339</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>340</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>341</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>342</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>343</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>344</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>345</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>346</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>347</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>348</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>349</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>350</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>351</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>352</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>353</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>354</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>355</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>356</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>357</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>358</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>359</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>360</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>361</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>362</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>363</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>364</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>365</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>366</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>367</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>368</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>369</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>370</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>371</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>372</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>373</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>374</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>375</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>376</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>377</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>378</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>379</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>380</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>381</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>382</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>383</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>384</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>385</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>386</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>387</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>388</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>389</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>390</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>391</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>392</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>393</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>394</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>395</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>396</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>397</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>398</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>399</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>400</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>401</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>402</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>403</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>404</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>405</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>406</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>407</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>408</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>409</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>410</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>411</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>412</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>413</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>414</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>415</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>416</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>417</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>418</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>419</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>420</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>421</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>422</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>423</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>424</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>425</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>426</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>427</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>428</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>429</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>430</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>431</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>432</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>433</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>434</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>435</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>436</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>437</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>438</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>439</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>440</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>441</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>442</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>443</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>444</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>445</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>446</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>447</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>448</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>449</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>450</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>451</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>452</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>453</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>454</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>455</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>456</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>457</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>458</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>459</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>460</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>461</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>462</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>463</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>464</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>465</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>466</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>467</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>468</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>469</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>470</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>471</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>472</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>473</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>474</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>475</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>476</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>477</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>478</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>479</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>480</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>481</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>482</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>483</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>484</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>485</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>486</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>487</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>488</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>489</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>490</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>491</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>492</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>493</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>494</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>495</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>496</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>497</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>498</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>499</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>500</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>501</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>502</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>503</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>504</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>505</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>506</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>507</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>508</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>509</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>510</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>511</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>512</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>513</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>514</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>515</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>516</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>517</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>518</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>519</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>520</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>521</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>522</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>523</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>524</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>525</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>526</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>527</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>528</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>529</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>530</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>531</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>532</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>533</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>534</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>535</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>536</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>537</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>538</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>539</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>540</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>541</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>542</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>543</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>544</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>545</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>546</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>547</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>548</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>549</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>550</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>551</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>552</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>553</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>554</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>555</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>556</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>557</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>558</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>559</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>560</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>561</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>562</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>563</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>564</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>565</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>566</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>567</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>568</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>569</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>570</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>571</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>572</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>573</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>574</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>575</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>576</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>577</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>578</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>579</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>580</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>581</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>582</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>583</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>584</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>585</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>586</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>587</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>588</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>589</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>590</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>591</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>592</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>593</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>594</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>595</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>596</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>597</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>598</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>599</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>600</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>601</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>602</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>603</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>604</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>605</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>606</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>607</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>608</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>609</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>610</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>611</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>612</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>613</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>614</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>615</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>616</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>617</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>618</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>619</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>620</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>621</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>622</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>623</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>624</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>625</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>626</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>627</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>628</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>629</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>630</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>631</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>632</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>633</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>634</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>635</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>636</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>637</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>638</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>639</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>640</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>641</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>642</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>643</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>644</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>645</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>646</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>647</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>648</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>649</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>650</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>651</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>652</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>653</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>654</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>655</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>656</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>657</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>658</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>659</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>660</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>661</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>662</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>663</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>664</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>665</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>666</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>667</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>668</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>669</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>670</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>671</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>672</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>673</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>674</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>675</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>676</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>677</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>678</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>679</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>680</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>681</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>682</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>683</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>684</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>685</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>686</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>687</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>688</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>689</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>690</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>691</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>692</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>693</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>694</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>695</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>696</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>697</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>698</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>699</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>700</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>701</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>702</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>703</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>704</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>705</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>706</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>707</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>708</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>709</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>710</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>711</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>712</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>713</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>714</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>715</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>716</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>717</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>718</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>719</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>720</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>721</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>722</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>723</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>724</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>725</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>726</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>727</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>728</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>729</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>730</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>731</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>732</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>733</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>734</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>735</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>736</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>737</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>738</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>739</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>740</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>741</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>742</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>743</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>744</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>745</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>746</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>747</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>748</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>749</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>750</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>751</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>752</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>753</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>754</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>755</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>756</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>757</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>758</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>759</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>760</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>761</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>762</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>763</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>764</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>765</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>766</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>767</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>768</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>769</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>770</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>771</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>772</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>773</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>774</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>775</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>776</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>777</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>778</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>779</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>780</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>781</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>782</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>783</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>784</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>785</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>786</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>787</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>788</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>789</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>790</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>791</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>792</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>793</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>794</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>795</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>796</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>797</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>798</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>799</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>800</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>801</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>802</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>803</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>804</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>805</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>806</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>807</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>808</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>809</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>810</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>811</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>812</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>813</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>814</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>815</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>816</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>817</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>818</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>819</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>820</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>821</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>822</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>823</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>824</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>825</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>826</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>827</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>828</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>829</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>830</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>831</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>832</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>833</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>834</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>835</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>836</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>837</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>838</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>839</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>840</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>841</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>842</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>843</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>844</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>845</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>846</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>847</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>848</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>849</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>850</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>851</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>852</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>853</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>854</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>855</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>856</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>857</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>858</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>859</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>860</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>861</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>862</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>863</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>864</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>865</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>866</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>867</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>868</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>869</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>870</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>871</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>872</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>873</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>874</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>875</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>876</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>877</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>878</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>879</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>880</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>881</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>882</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>883</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>884</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>885</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>886</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>887</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>888</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>889</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>890</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>891</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>892</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>893</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>894</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>895</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>896</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>897</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>898</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>899</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>900</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>901</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>902</id_Product>
+		<id_Supplier>1</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>1</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>3</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>5</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>7</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>9</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>11</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>13</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>15</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>17</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>19</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>21</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>23</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>25</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>27</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>29</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>31</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>33</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>35</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>37</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>39</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>41</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>43</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>45</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>47</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>49</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>51</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>53</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>55</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>57</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>59</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>61</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>63</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>65</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>67</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>69</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>71</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>73</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>75</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>77</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>79</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>81</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>83</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>85</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>87</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>89</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>91</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>93</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>95</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>97</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>99</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>101</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>103</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>105</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>107</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>109</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>111</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>113</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>115</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>117</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>119</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>121</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>123</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>125</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>127</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>129</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>131</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>133</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>135</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>137</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>139</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>141</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>143</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>145</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>147</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>149</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>151</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>153</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>155</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>157</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>159</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>161</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>163</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>165</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>167</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>169</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>171</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>173</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>175</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>177</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>179</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>181</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>183</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>185</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>187</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>189</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>191</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>193</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+
+	<ROW>
+		<id_Product>195</id_Product>
+		<id_Supplier>2</id_Supplier>
+	</ROW>
+</DATA>

@@ -1,0 +1,83 @@
+<DATA>
+
+	<ROW>
+		<id>1</id>
+		<createdAt>2012-02-09 00:00:00</createdAt>
+		<paidAt>2012-02-09 00:00:00</paidAt>
+		<idCustomer>2</idCustomer>
+		<idPaymentInfo>1</idPaymentInfo>
+		<idShippingMethod>1</idShippingMethod>
+	</ROW>
+
+	<ROW>
+		<id>2</id>
+		<createdAt>2012-08-10 00:00:00</createdAt>
+		<paidAt>2012-08-10 00:00:00</paidAt>
+		<idCustomer>3</idCustomer>
+		<idPaymentInfo>2</idPaymentInfo>
+		<idShippingMethod>2</idShippingMethod>
+	</ROW>
+
+	<ROW>
+		<id>3</id>
+		<createdAt>2014-05-10 00:00:00</createdAt>
+		<paidAt>2014-05-10 00:00:00</paidAt>
+		<idCustomer>4</idCustomer>
+		<idPaymentInfo>3</idPaymentInfo>
+		<idShippingMethod>3</idShippingMethod>
+	</ROW>
+
+	<ROW>
+		<id>4</id>
+		<createdAt>2012-08-10 00:00:00</createdAt>
+		<paidAt>2012-08-10 00:00:00</paidAt>
+		<idCustomer>2</idCustomer>
+		<idPaymentInfo>1</idPaymentInfo>
+		<idShippingMethod>1</idShippingMethod>
+	</ROW>
+
+	<ROW>
+		<id>5</id>
+		<createdAt>2013-01-25 00:00:00</createdAt>
+		<paidAt>2013-01-25 00:00:00</paidAt>
+		<idCustomer>3</idCustomer>
+		<idPaymentInfo>2</idPaymentInfo>
+		<idShippingMethod>2</idShippingMethod>
+	</ROW>
+
+	<ROW>
+		<id>6</id>
+		<createdAt>2014-11-18 00:00:00</createdAt>
+		<paidAt>2014-11-18 00:00:00</paidAt>
+		<idCustomer>4</idCustomer>
+		<idPaymentInfo>3</idPaymentInfo>
+		<idShippingMethod>3</idShippingMethod>
+	</ROW>
+
+	<ROW>
+		<id>7</id>
+		<createdAt>2013-04-08 00:00:00</createdAt>
+		<paidAt>2013-04-08 00:00:00</paidAt>
+		<idCustomer>2</idCustomer>
+		<idPaymentInfo>1</idPaymentInfo>
+		<idShippingMethod>3</idShippingMethod>
+	</ROW>
+
+	<ROW>
+		<id>8</id>
+		<createdAt>2013-11-25 00:00:00</createdAt>
+		<paidAt>2013-11-25 00:00:00</paidAt>
+		<idCustomer>3</idCustomer>
+		<idPaymentInfo>2</idPaymentInfo>
+		<idShippingMethod>3</idShippingMethod>
+	</ROW>
+
+	<ROW>
+		<id>9</id>
+		<createdAt>2015-02-25 00:00:00</createdAt>
+		<paidAt>2015-02-25 00:00:00</paidAt>
+		<idCustomer>4</idCustomer>
+		<idPaymentInfo>3</idPaymentInfo>
+		<idShippingMethod>3</idShippingMethod>
+	</ROW>
+</DATA>

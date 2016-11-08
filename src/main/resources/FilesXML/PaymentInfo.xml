@@ -1,0 +1,22 @@
+<DATA>
+
+	<ROW>
+		<id>1</id>
+		<paymentMethod>Visa</paymentMethod>
+	</ROW>
+
+	<ROW>
+		<id>2</id>
+		<paymentMethod>Master</paymentMethod>
+	</ROW>
+
+	<ROW>
+		<id>3</id>
+		<paymentMethod>AmericanExpress</paymentMethod>
+	</ROW>
+
+	<ROW>
+		<id>4</id>
+		<paymentMethod>PayPal</paymentMethod>
+	</ROW>
+</DATA>
