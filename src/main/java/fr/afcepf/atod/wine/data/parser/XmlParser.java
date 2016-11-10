@@ -304,7 +304,7 @@ public class XmlParser {
                             productWine.getPrice(),
                             productWine.getApiId(),
                             new WineType(productWine.getProductType().getId(),productWine.getProductType().getType()), 
-                            new WineVintage(((productWine.getProductVintage()!=null)?productWine.getProductVintage().getYear():0)), 
+                            new WineVintage(((productWine.getProductVintage()!=null)?productWine.getProductVintage().getYear().toString():"")), 
                             new WineVarietal(productWine.getProductVarietal().getId(),productWine.getProductVarietal().getDescription()));
                     for (ProductFeature feat : productWine.getFeatures()) {
                         esWine.addFeature(new WineFeature(feat.getId(), feat.getLabel()));
