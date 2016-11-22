@@ -184,7 +184,7 @@ public class XmlParser {
             daoCountry.insertObj(new Country(null,"LV", "Lettonie", "LVL", "Lats letton", "flaticon-latvia-lat"));
             daoCountry.insertObj(new Country(null,"MT", "Malte", "EUR", "Euro", "flaticon-euro-currency-symbol"));
             daoCountry.insertObj(new Country(null,"NL", "Pays-Bas", "EUR", "Euro", "flaticon-euro-currency-symbol"));
-            daoCountry.insertObj(new Country(null,"PL", "Pologne", "Zloty polonais", "PLN", "flaticon-poland-zloty-currency-symbol"));
+            daoCountry.insertObj(new Country(null,"PL", "Pologne", "PLN", "Zloty polonais", "flaticon-poland-zloty-currency-symbol"));
             daoCountry.insertObj(new Country(null,"PT", "Portugal", "EUR", "Euro", "flaticon-euro-currency-symbol"));
             daoCountry.insertObj(new Country(null,"RO", "Roumanie", "EUR", "Euro", "flaticon-euro-currency-symbol"));
             daoCountry.insertObj(new Country(null,"SE", "Suède", "SEK", "Couronne suédoise", "flaticon-sweden-krona-currency-symbol"));
