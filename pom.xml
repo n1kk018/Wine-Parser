@@ -36,6 +36,11 @@
             <artifactId>Wine-Data-Order</artifactId>
             <version>${wine-data-admin.version}</version>
         </dependency>
+         <dependency>
+            <groupId>fr.afcepf.atod</groupId>
+            <artifactId>OnWine-ES</artifactId>
+            <version>1.0</version>
+        </dependency>
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>

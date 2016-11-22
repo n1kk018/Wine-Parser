@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Directories #
 /build/
 /bin/
@@ -79,6 +78,9 @@ Servers/
  
 # PDT-specific
 .buildpath
+<<<<<<< HEAD
+Images/
+=======
 =======
 # Directories #
 /build/
@@ -168,4 +170,3 @@ Images/
 /src/main/resources/wine_pictures/*/*.jpg
 /src/main/resources/wine_pictures/*/*.jpeg
 /src/main/resources/wine_pictures/*/.gitignore
->>>>>>> branch 'master' of https://github.com/n1kk018/Wine-Parser
